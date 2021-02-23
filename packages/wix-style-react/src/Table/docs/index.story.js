@@ -22,6 +22,7 @@ import testkitReadme from './README.TESTKIT.md';
 import TableStructureExample from '!raw-loader!./examples/1_TableStructureExample';
 import TableSkinExample from '!raw-loader!./examples/2_TableSkinExample';
 import TableRowVerticalPaddingExample from '!raw-loader!./examples/3_TableRowVerticalPaddingExample';
+import TableHighlightedRowsExample from '!raw-loader!./examples/4_TableHighlightedRowsExample';
 import TableRowDetailsExampleRaw from '!raw-loader!./examples/TableRowDetailsExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
@@ -33,7 +34,6 @@ import TableActionCellExampleRaw from '!raw-loader!./examples/TableActionCellExa
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableInfiniteScrollExampleRaw from '!raw-loader!./examples/TableInfiniteScrollExample';
 import TableInfiniteScrollWithBulkSelectionExampleRaw from '!raw-loader!./examples/TableInfiniteScrollWithBulkSelectionExample';
-import TableHighlightedRowsExampleRaw from '!raw-loader!./examples/TableHighlightedRowsExample';
 import TableAlignedColumnsExampleRaw from '!raw-loader!./examples/TableAlignedColumnsExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
 import TableStickyScrollExampleRaw from '!raw-loader!./examples/TableStickyScrollExample';
@@ -147,6 +147,13 @@ export default {
               compact: true,
             },
             {
+              title: 'Highlighted Rows',
+              description:
+                'Rows can be highlighted to draw attention to i.e. status change, new items on the list, etc.',
+              source: TableHighlightedRowsExample,
+              compact: true,
+            },
+            {
               title: 'Table with Toolbar',
               description:
                 'This is a basic table that implements a toolbar using `<Table.ToolbarContainer/>` - which receives the SelectionContext (`showSelection` is true in order to enable the selection). Notice that the whole table is wrapped by `<Card/>` so that the toolbar seems like part of the table. In addition, we render the main toolbar when there are no selected rows, and an actions toolbar when some rows are selected. ' +
@@ -214,13 +221,6 @@ export default {
               description:
                 'When `infiniteScroll` (see the previous example) and `showSelection` are set, and the data is not fully loaded yet (`hasMore` is `true`), and then the user clicks the bulk selection checkbox, by default only loaded items are selected. If `totalSelectableCount` is set, then when the bulk selection checkbox is clicked before all the data is loaded, the grid enters an "infinite bulk selection" mode. It assumes all items are selected, and it only keeps track of the items manually unselected by the user. Newly loaded items are being selected by default. `SelectionContext.selectedCount` will be updated based on the `totalSelectableCount` prop.',
               source: TableInfiniteScrollWithBulkSelectionExampleRaw,
-              compact: true,
-            },
-            {
-              title: 'Table with Highlighted Rows',
-              description:
-                'This example demonstrates how to highlight rows according to some logic.',
-              source: TableHighlightedRowsExampleRaw,
               compact: true,
             },
             {
