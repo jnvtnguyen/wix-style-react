@@ -26,6 +26,7 @@ import TableHighlightedRowsExample from '!raw-loader!./examples/4_TableHighlight
 import TableExpandableRowsExample from '!raw-loader!./examples/5_TableExpandableRowsExample';
 import TableWithUnselectableRowsExample from '!raw-loader!./examples/6_TableWithUnselectableRowsExample';
 import TableActionCellExample from '!raw-loader!./examples/7_TableActionCellExample';
+import TableColumnAlignmentAndWidthExample from '!raw-loader!./examples/8_TableColumnAlignmentAndWidthExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
@@ -34,7 +35,6 @@ import TableEmptyStateExampleRaw from '!raw-loader!./examples/TableEmptyStateExa
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableInfiniteScrollExampleRaw from '!raw-loader!./examples/TableInfiniteScrollExample';
 import TableInfiniteScrollWithBulkSelectionExampleRaw from '!raw-loader!./examples/TableInfiniteScrollWithBulkSelectionExample';
-import TableAlignedColumnsExampleRaw from '!raw-loader!./examples/TableAlignedColumnsExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
 import TableStickyScrollExampleRaw from '!raw-loader!./examples/TableStickyScrollExample';
 
@@ -175,6 +175,15 @@ export default {
               compact: true,
             },
             {
+              title: 'Column Alignment & Width',
+              description: `
+Each column width and alignment can be customised. Set column width in percentage or pixels. Align cell content horizontally with align prop (start, center or end).\n
+In case of vertical alignment of content within cell - it should be done within the render method explicitly.
+              `,
+              source: TableColumnAlignmentAndWidthExample,
+              compact: true,
+            },
+            {
               title: 'Table with Toolbar',
               description:
                 'This is a basic table that implements a toolbar using `<Table.ToolbarContainer/>` - which receives the SelectionContext (`showSelection` is true in order to enable the selection). Notice that the whole table is wrapped by `<Card/>` so that the toolbar seems like part of the table. In addition, we render the main toolbar when there are no selected rows, and an actions toolbar when some rows are selected. ' +
@@ -228,13 +237,6 @@ export default {
               description:
                 'When `infiniteScroll` (see the previous example) and `showSelection` are set, and the data is not fully loaded yet (`hasMore` is `true`), and then the user clicks the bulk selection checkbox, by default only loaded items are selected. If `totalSelectableCount` is set, then when the bulk selection checkbox is clicked before all the data is loaded, the grid enters an "infinite bulk selection" mode. It assumes all items are selected, and it only keeps track of the items manually unselected by the user. Newly loaded items are being selected by default. `SelectionContext.selectedCount` will be updated based on the `totalSelectableCount` prop.',
               source: TableInfiniteScrollWithBulkSelectionExampleRaw,
-              compact: true,
-            },
-            {
-              title: 'Table with Aligned Columns',
-              description:
-                'This example demonstrates how to align the cells horizontally and vertically. Each column accepts `align` prop that aligns the text of the cells within this column horizontally. In case we want to align vertically - it should be done within the `render` method explicitly. Notice that we also define a width for the columns, which is optional.',
-              source: TableAlignedColumnsExampleRaw,
               compact: true,
             },
             {
