@@ -21,6 +21,7 @@ import testkitReadme from './README.TESTKIT.md';
 
 import TableStructureExample from '!raw-loader!./examples/1_TableStructureExample';
 import TableSkinExample from '!raw-loader!./examples/2_TableSkinExample';
+import TableRowVerticalPaddingExample from '!raw-loader!./examples/3_TableRowVerticalPaddingExample';
 import TableRowDetailsExampleRaw from '!raw-loader!./examples/TableRowDetailsExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
@@ -136,6 +137,13 @@ export default {
               description:
                 'Component supports two skins: standard and neutral.',
               source: TableSkinExample,
+              compact: true,
+            },
+            {
+              title: 'Row Vertical Padding',
+              description:
+                'Supports `small`, `medium` (default) and `large` padding sizes. Large padding should be used for short lists only.',
+              source: TableRowVerticalPaddingExample,
               compact: true,
             },
             {
