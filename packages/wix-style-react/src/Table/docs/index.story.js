@@ -28,6 +28,7 @@ import TableWithUnselectableRowsExample from '!raw-loader!./examples/6_TableWith
 import TableActionCellExample from '!raw-loader!./examples/7_TableActionCellExample';
 import TableColumnAlignmentAndWidthExample from '!raw-loader!./examples/8_TableColumnAlignmentAndWidthExample';
 import TableImportantColumnExample from '!raw-loader!./examples/9_TableImportantColumnExample';
+import TableStickyScrollExample from '!raw-loader!./examples/10_TableStickyScrollExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
@@ -37,7 +38,6 @@ import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableInfiniteScrollExampleRaw from '!raw-loader!./examples/TableInfiniteScrollExample';
 import TableInfiniteScrollWithBulkSelectionExampleRaw from '!raw-loader!./examples/TableInfiniteScrollWithBulkSelectionExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
-import TableStickyScrollExampleRaw from '!raw-loader!./examples/TableStickyScrollExample';
 
 const code = config =>
   baseCode({
@@ -192,6 +192,13 @@ In case of vertical alignment of content within cell - it should be done within 
               compact: true,
             },
             {
+              title: 'Sticky Columns and Horizontal Scroll',
+              description:
+                'Enable horizontal scroll with `horizontalScroll` prop. Be aware that in order it to work as expected each column must have a specific width set. Combined column width should exceed table width. In addition, you can have a number of “sticky” columns pinned to the left side of a table using `stickyColumns` prop. Sticky columns will keep their original position and will not scroll with the rest of table columns.',
+              source: TableStickyScrollExample,
+              compact: true,
+            },
+            {
               title: 'Table with Toolbar',
               description:
                 'This is a basic table that implements a toolbar using `<Table.ToolbarContainer/>` - which receives the SelectionContext (`showSelection` is true in order to enable the selection). Notice that the whole table is wrapped by `<Card/>` so that the toolbar seems like part of the table. In addition, we render the main toolbar when there are no selected rows, and an actions toolbar when some rows are selected. ' +
@@ -217,13 +224,6 @@ In case of vertical alignment of content within cell - it should be done within 
               description:
                 'This example shows the usage for displaying an empty state message. Notice that `<Card/>` and `<TableToolbar/>` are optional - we should use them as necessary.',
               source: TableEmptyStateExampleRaw,
-              compact: true,
-            },
-            {
-              title: 'Table with Sticky Columns and Horizontal Scroll',
-              description:
-                'Horizontal scroll can be enabled by providing `horizontalScroll` prop and defining `width` prop for all table columns. Combined column size should exceed available table size. In addition, you can "sticky" a number of columns from the left using `stickyColumns` prop. Sticky columns will remain and will not scroll with the rest of table columns.',
-              source: TableStickyScrollExampleRaw,
               compact: true,
             },
             {
