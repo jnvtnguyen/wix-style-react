@@ -20,8 +20,8 @@ import contextReadmeApi from './CONTEXT_README.API.md';
 import testkitReadme from './README.TESTKIT.md';
 
 import TableStructureExample from '!raw-loader!./examples/1_TableStructureExample';
+import TableSkinExample from '!raw-loader!./examples/2_TableSkinExample';
 import TableRowDetailsExampleRaw from '!raw-loader!./examples/TableRowDetailsExample';
-import TableSkinNeutralExample from '!raw-loader!./examples/TableSkinNeutralExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
@@ -132,9 +132,10 @@ export default {
               compact: true,
             },
             {
-              title: 'Table Skin',
-              description: 'Supports standard and neutral.',
-              source: TableSkinNeutralExample,
+              title: 'Skin',
+              description:
+                'Component supports two skins: standard and neutral.',
+              source: TableSkinExample,
               compact: true,
             },
             {
