@@ -25,12 +25,12 @@ import TableRowVerticalPaddingExample from '!raw-loader!./examples/3_TableRowVer
 import TableHighlightedRowsExample from '!raw-loader!./examples/4_TableHighlightedRowsExample';
 import TableExpandableRowsExample from '!raw-loader!./examples/5_TableExpandableRowsExample';
 import TableWithUnselectableRowsExample from '!raw-loader!./examples/6_TableWithUnselectableRowsExample';
+import TableActionCellExample from '!raw-loader!./examples/7_TableActionCellExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TableBulkSelectionCheckboxExampleRaw from '!raw-loader!./examples/TableBulkSelectionCheckboxExample';
 import TableEmptyStateExampleRaw from '!raw-loader!./examples/TableEmptyStateExample';
-import TableActionCellExampleRaw from '!raw-loader!./examples/TableActionCellExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableInfiniteScrollExampleRaw from '!raw-loader!./examples/TableInfiniteScrollExample';
 import TableInfiniteScrollWithBulkSelectionExampleRaw from '!raw-loader!./examples/TableInfiniteScrollWithBulkSelectionExample';
@@ -168,6 +168,13 @@ export default {
               compact: true,
             },
             {
+              title: 'Action Cell',
+              description:
+                'Use `<TableActionCell/>` to add actions to the last column of a row. Primary actions are displayed as buttons, whereas secondary actions as icon buttons. Use `numOfVisibleSecondaryActions` to limit the amount of visible actions. Hidden ones will appear inside a popover menu. See <TableActionCell/> for more details.',
+              source: TableActionCellExample,
+              compact: true,
+            },
+            {
               title: 'Table with Toolbar',
               description:
                 'This is a basic table that implements a toolbar using `<Table.ToolbarContainer/>` - which receives the SelectionContext (`showSelection` is true in order to enable the selection). Notice that the whole table is wrapped by `<Card/>` so that the toolbar seems like part of the table. In addition, we render the main toolbar when there are no selected rows, and an actions toolbar when some rows are selected. ' +
@@ -193,13 +200,6 @@ export default {
               description:
                 'This example shows the usage for displaying an empty state message. Notice that `<Card/>` and `<TableToolbar/>` are optional - we should use them as necessary.',
               source: TableEmptyStateExampleRaw,
-              compact: true,
-            },
-            {
-              title: 'Table with ActionCell',
-              description:
-                'This example demonstrates how to render `<TableActionCell/>` in a column. The primary actions are rendered as buttons, whereas the secondary actions are rendered as icons. In case we use `numOfVisibleSecondaryActions`, the hidden icons would appear inside a popover menu.',
-              source: TableActionCellExampleRaw,
               compact: true,
             },
             {
