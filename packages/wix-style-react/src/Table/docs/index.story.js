@@ -29,7 +29,7 @@ import TableActionCellExample from '!raw-loader!./examples/7_TableActionCellExam
 import TableColumnAlignmentAndWidthExample from '!raw-loader!./examples/8_TableColumnAlignmentAndWidthExample';
 import TableImportantColumnExample from '!raw-loader!./examples/9_TableImportantColumnExample';
 import TableStickyScrollExample from '!raw-loader!./examples/10_TableStickyScrollExample';
-import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
+import TableToolbarExample from '!raw-loader!./examples/11_TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TableBulkSelectionCheckboxExampleRaw from '!raw-loader!./examples/TableBulkSelectionCheckboxExample';
@@ -199,11 +199,10 @@ In case of vertical alignment of content within cell - it should be done within 
               compact: true,
             },
             {
-              title: 'Table with Toolbar',
+              title: 'Toolbar',
               description:
-                'This is a basic table that implements a toolbar using `<Table.ToolbarContainer/>` - which receives the SelectionContext (`showSelection` is true in order to enable the selection). Notice that the whole table is wrapped by `<Card/>` so that the toolbar seems like part of the table. In addition, we render the main toolbar when there are no selected rows, and an actions toolbar when some rows are selected. ' +
-                'If you want to manually create the bulk selection ("Select All") UX in the table toolbar (or anywhere else), set `hideBulkSelectionCheckbox` prop and use `<Table.BulkSelectionCheckbox>` component to add bulk selection in another location (under `<Table>`) - see `Table with custom bulk selection checkbox` example.',
-              source: TableToolbarExampleRaw,
+                'Add a toolbar to the table using `<Table.ToolbarContainer/>`. Pass `SelectionContext` in order to enable selection. There are two types of a toolbar: main and actions toolbar. See `<TableToolbar/>` for more details.',
+              source: TableToolbarExample,
               compact: true,
             },
             {
