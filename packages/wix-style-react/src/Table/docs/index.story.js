@@ -27,6 +27,7 @@ import TableExpandableRowsExample from '!raw-loader!./examples/5_TableExpandable
 import TableWithUnselectableRowsExample from '!raw-loader!./examples/6_TableWithUnselectableRowsExample';
 import TableActionCellExample from '!raw-loader!./examples/7_TableActionCellExample';
 import TableColumnAlignmentAndWidthExample from '!raw-loader!./examples/8_TableColumnAlignmentAndWidthExample';
+import TableImportantColumnExample from '!raw-loader!./examples/9_TableImportantColumnExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
@@ -181,6 +182,13 @@ Each column width and alignment can be customised. Set column width in percentag
 In case of vertical alignment of content within cell - it should be done within the render method explicitly.
               `,
               source: TableColumnAlignmentAndWidthExample,
+              compact: true,
+            },
+            {
+              title: 'Important Column',
+              description:
+                'Main column can be highlighted with an increased size text.',
+              source: TableImportantColumnExample,
               compact: true,
             },
             {
