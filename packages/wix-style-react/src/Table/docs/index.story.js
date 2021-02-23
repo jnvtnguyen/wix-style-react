@@ -24,11 +24,11 @@ import TableSkinExample from '!raw-loader!./examples/2_TableSkinExample';
 import TableRowVerticalPaddingExample from '!raw-loader!./examples/3_TableRowVerticalPaddingExample';
 import TableHighlightedRowsExample from '!raw-loader!./examples/4_TableHighlightedRowsExample';
 import TableExpandableRowsExample from '!raw-loader!./examples/5_TableExpandableRowsExample';
+import TableWithUnselectableRowsExample from '!raw-loader!./examples/6_TableWithUnselectableRowsExample';
 import TableToolbarExampleRaw from '!raw-loader!./examples/TableToolbarExample';
 import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TableBulkSelectionCheckboxExampleRaw from '!raw-loader!./examples/TableBulkSelectionCheckboxExample';
-import TableWithUnselectableRowsExampleRaw from '!raw-loader!./examples/TableWithUnselectableRowsExample';
 import TableEmptyStateExampleRaw from '!raw-loader!./examples/TableEmptyStateExample';
 import TableActionCellExampleRaw from '!raw-loader!./examples/TableActionCellExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
@@ -161,6 +161,13 @@ export default {
               compact: true,
             },
             {
+              title: 'Unselectable Rows',
+              description:
+                'Restrict row selection by using `unselectable` prop.',
+              source: TableWithUnselectableRowsExample,
+              compact: true,
+            },
+            {
               title: 'Table with Toolbar',
               description:
                 'This is a basic table that implements a toolbar using `<Table.ToolbarContainer/>` - which receives the SelectionContext (`showSelection` is true in order to enable the selection). Notice that the whole table is wrapped by `<Card/>` so that the toolbar seems like part of the table. In addition, we render the main toolbar when there are no selected rows, and an actions toolbar when some rows are selected. ' +
@@ -235,13 +242,6 @@ export default {
               description:
                 'This is an example of having a custom bulk selection checkbox in the table toolbar using the `<Table.BulkSelectionCheckbox>` component.',
               source: TableBulkSelectionCheckboxExampleRaw,
-              compact: true,
-            },
-            {
-              title: 'Table with unselectable rows',
-              description:
-                'You can make a table row unselectable (so no checkbox appears for it in the selection column) by setting `unselectable: true` for the row.',
-              source: TableWithUnselectableRowsExampleRaw,
               compact: true,
             },
           ].map(code),
