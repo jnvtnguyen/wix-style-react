@@ -31,7 +31,7 @@ import TableImportantColumnExample from '!raw-loader!./examples/9_TableImportant
 import TableStickyScrollExample from '!raw-loader!./examples/10_TableStickyScrollExample';
 import TableToolbarExample from '!raw-loader!./examples/11_TableToolbarExample';
 import TableWithBulkSelectionExample from '!raw-loader!./examples/12_TableWithBulkSelectionExample';
-import TableSubToolbarExampleRaw from '!raw-loader!./examples/TableSubToolbarExample';
+import TableSubtoolbarExample from '!raw-loader!./examples/13_TableSubtoolbarExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TableEmptyStateExampleRaw from '!raw-loader!./examples/TableEmptyStateExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
@@ -213,10 +213,10 @@ In case of vertical alignment of content within cell - it should be done within 
               compact: true,
             },
             {
-              title: 'Table with Sub-Toolbar',
+              title: 'Sub-Toolbar',
               description:
-                'A Table can contain a sticky sub-toolbar, an area for additional actions such as displaying a tag list of filtered items.',
-              source: TableSubToolbarExampleRaw,
+                'Additional area to store content related to main toolbar actions. For example, a list of active filters.',
+              source: TableSubtoolbarExample,
               compact: true,
             },
             {
