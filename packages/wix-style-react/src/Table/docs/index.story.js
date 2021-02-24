@@ -38,6 +38,7 @@ import TablePaginationExample from '!raw-loader!./examples/16_TablePaginationExa
 import TableEmptyStateExample from '!raw-loader!./examples/17_TableEmptyStateExample';
 import TableVerticalCellAlignmentExample from '!raw-loader!./examples/18_TableVerticalCellAlignmentExample';
 import TableStickyToolbarExample from '!raw-loader!./examples/19_TableStickyToolbarExample.js';
+import TableWithAdvancedFiltersExample from '!raw-loader!./examples/20_TableWithAdvancedFiltersExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
@@ -262,6 +263,13 @@ In case of vertical alignment of content within cell - it should be done within 
               description:
                 'This example demonstrates how to render a table with a sticky title and toolbar within `<Page/>`. Notice that `<Page/>` is practically responsible to render the title, using `<Page.Header/>` whereas titleBarVisible is false. Moreover, we use `<Page.Sticky/>` in order to stick the toolbar and sub-toolbar to the top while scrolling.',
               source: TableStickyToolbarExample,
+              compact: true,
+            },
+            {
+              title: 'Table with Advanced Filters',
+              description:
+                'When there are more than 3 filter options transfer them outside to a `<SidePanel/>`. Add a button to a toolbar which calls out that panel.',
+              source: TableWithAdvancedFiltersExample,
               compact: true,
             },
             {
