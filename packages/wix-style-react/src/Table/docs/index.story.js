@@ -36,6 +36,7 @@ import TableInfiniteScrollExample from '!raw-loader!./examples/14_TableInfiniteS
 import TableInfiniteScrollAndBulkSelection from '!raw-loader!./examples/15_TableInfiniteScrollAndBulkSelection';
 import TablePaginationExample from '!raw-loader!./examples/16_TablePaginationExample';
 import TableEmptyStateExample from '!raw-loader!./examples/17_TableEmptyStateExample';
+import TableVerticalCellAlignmentExample from '!raw-loader!./examples/18_TableVerticalCellAlignmentExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
@@ -246,6 +247,13 @@ In case of vertical alignment of content within cell - it should be done within 
               description:
                 'This example shows the usage for displaying an empty state message. Notice that `<Card/>` and `<TableToolbar/>` are optional - we should use them as necessary.',
               source: TableEmptyStateExample,
+              compact: true,
+            },
+            {
+              title: 'Vertical Alignment in a Cell',
+              description:
+                'If we want to align cell content vertically it should be done within the render method explicitly.',
+              source: TableVerticalCellAlignmentExample,
               compact: true,
             },
             {
