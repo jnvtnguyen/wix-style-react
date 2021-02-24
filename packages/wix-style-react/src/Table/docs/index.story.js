@@ -40,8 +40,6 @@ import TableVerticalCellAlignmentExample from '!raw-loader!./examples/18_TableVe
 import TableStickyToolbarExample from '!raw-loader!./examples/19_TableStickyToolbarExample.js';
 import TableWithAdvancedFiltersExample from '!raw-loader!./examples/20_TableWithAdvancedFiltersExample';
 import TableVirtualizationExample from '!raw-loader!./examples/21_TableVirtualizationExample';
-import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
-import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 
 const code = config =>
   baseCode({
@@ -270,19 +268,6 @@ In case of vertical alignment of content within cell - it should be done within 
               description:
                 'When there are more than 3 filter options transfer them outside to a `<SidePanel/>`. Add a button to a toolbar which calls out that panel.',
               source: TableWithAdvancedFiltersExample,
-              compact: true,
-            },
-            {
-              title: 'Hidden Header',
-              description: 'A table with hidden header.',
-              source: TableHideHeaderExampleRaw,
-              compact: true,
-            },
-            {
-              title: 'Table in Page',
-              description:
-                'This example demonstrates how to render a table with sticky title and toolbar within `<Page/>`. Notice that `<Page/>` is practically responsible to render the title, using `<Page.Header/>` whereas `titleBarVisible` is false. Moreover, we use `<Page.Sticky/>` in order to stick the toolbar to top while scrolling.',
-              source: TablePageExampleRaw,
               compact: true,
             },
           ].map(code),
