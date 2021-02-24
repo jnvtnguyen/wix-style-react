@@ -302,7 +302,7 @@ describe('Table Action Cell', () => {
 
     it('should add suffix icon to primary action', async () => {
       const { driver } = render(
-        <TableActionCell {...primaryActionProps(() => {}, { SuffixIcon: <Edit /> })} />,
+        <TableActionCell {...primaryActionProps(() => {}, { suffixIcon: <Edit /> })} />,
       );
 
       expect(await driver.getIsPrimaryActionButtonSuffixIconExists()).toBe(true);

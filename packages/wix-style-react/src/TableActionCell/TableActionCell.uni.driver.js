@@ -61,14 +61,14 @@ export const tableActionCellUniDriverFactory = (base, body) => {
      * @returns {Promise<boolean>}
      */
     getIsPrimaryActionButtonPrefixIconExists: async () =>
-      await getPrimaryActionButtonDriver().getIsPrimaryActionButtonPrefixIconExists(),
+      await getPrimaryActionButtonDriver().isPrefixIconExists(),
 
     /**
      * Checks whether the primary action button has a suffix icon
      * @returns {Promise<boolean>}
      */
     getIsPrimaryActionButtonSuffixIconExists: async () =>
-      await getPrimaryActionButtonDriver().getIsPrimaryActionButtonSuffixIconExists(),
+      await getPrimaryActionButtonDriver().isSuffixIconExists(),
 
     /**
      * Get the number of the visible secondary actions
