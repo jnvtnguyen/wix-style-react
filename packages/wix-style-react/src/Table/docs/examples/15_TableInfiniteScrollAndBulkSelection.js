@@ -1,11 +1,7 @@
 /* eslint-disable */
 
 () => {
-  const [count, setCount] = React.useState(5);
-  const [hasMore, setHasMore] = React.useState(true);
-  const [container, setContainer] = React.useState(null);
-
-  const records = [
+  const initialData = [
     { firstName: 'Meghana', lastName: 'Bishop' },
     { firstName: 'Sara', lastName: 'Porter' },
     { firstName: 'Deborah', lastName: 'Rhodes' },
@@ -14,7 +10,31 @@
 
   var containerRef = React.useRef(null);
 
-  React.useEffect(() => setContainer(containerRef), []);
+  const [count, setCount] = React.useState(5);
+  const [data, setData] = React.useState([]);
+  const [container, setContainer] = React.useState(null);
+
+  const simulateFetchFromServer = () => {
+    setTimeout(() => {
+      let data = [];
+      const more = count + 5;
+      for (let i = 0; i < more; i++) {
+        data = data.concat(initialData);
+      }
+      setCount(more);
+      setData(data);
+    }, 1000);
+  };
+
+  React.useEffect(() => {
+    setContainer(containerRef);
+    simulateFetchFromServer();
+  }, []);
+
+  const columns = [
+    { title: 'First', render: row => row.firstName },
+    { title: 'Last', render: row => row.lastName },
+  ];
 
   const renderToolbar = selectionContext => {
     return (
@@ -28,22 +48,6 @@
     );
   };
 
-  const _loadMore = () => {
-    // Simulates asynchronous loading of data
-    setTimeout(() => {
-      setCount(count + 5);
-    }, 1000);
-  };
-
-  const _generateData = count => {
-    let data = [];
-
-    for (let i = 0; i < count; i++) {
-      data = data.concat(records);
-    }
-    return data;
-  };
-
   return (
     <div
       ref={ref => (containerRef = ref)}
@@ -51,18 +55,15 @@
     >
       <Card>
         <Table
-          showSelection
-          infiniteScroll={true}
+          infiniteScroll
+          loadMore={simulateFetchFromServer}
           itemsPerPage={20}
-          hasMore={hasMore}
-          loadMore={_loadMore}
+          hasMore={true}
           scrollElement={container}
           totalSelectableCount={180}
-          data={_generateData(count)}
-          columns={[
-            { title: 'First', render: row => row.firstName },
-            { title: 'Last', render: row => row.lastName },
-          ]}
+          showSelection
+          data={data}
+          columns={columns}
         >
           <Table.ToolbarContainer>{renderToolbar}</Table.ToolbarContainer>
           <Table.Content />
