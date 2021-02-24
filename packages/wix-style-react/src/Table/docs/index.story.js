@@ -32,10 +32,10 @@ import TableStickyScrollExample from '!raw-loader!./examples/10_TableStickyScrol
 import TableToolbarExample from '!raw-loader!./examples/11_TableToolbarExample';
 import TableWithBulkSelectionExample from '!raw-loader!./examples/12_TableWithBulkSelectionExample';
 import TableSubtoolbarExample from '!raw-loader!./examples/13_TableSubtoolbarExample';
+import TableInfiniteScrollExample from '!raw-loader!./examples/14_TableInfiniteScrollExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TableEmptyStateExampleRaw from '!raw-loader!./examples/TableEmptyStateExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
-import TableInfiniteScrollExampleRaw from '!raw-loader!./examples/TableInfiniteScrollExample';
 import TableInfiniteScrollWithBulkSelectionExampleRaw from '!raw-loader!./examples/TableInfiniteScrollWithBulkSelectionExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
 
@@ -220,6 +220,13 @@ In case of vertical alignment of content within cell - it should be done within 
               compact: true,
             },
             {
+              title: 'Infinite Scroll',
+              description:
+                'Use `infiniteScroll` prop to load data to the table gradually. New pages are loaded automatically when the scrollbar reaches the end. Notice that the infinite scroll should listen to some scroll events (in order to determine when to render new items). In this example, we pass a container with limited height - but it could be any element that triggers scroll events.',
+              source: TableInfiniteScrollExample,
+              compact: true,
+            },
+            {
               title: 'Hidden Header',
               description: 'A table with hidden header.',
               source: TableHideHeaderExampleRaw,
@@ -237,13 +244,6 @@ In case of vertical alignment of content within cell - it should be done within 
               description:
                 'This example demonstrates how to render a table with sticky title and toolbar within `<Page/>`. Notice that `<Page/>` is practically responsible to render the title, using `<Page.Header/>` whereas `titleBarVisible` is false. Moreover, we use `<Page.Sticky/>` in order to stick the toolbar to top while scrolling.',
               source: TablePageExampleRaw,
-              compact: true,
-            },
-            {
-              title: 'Table with Infinite Scroll',
-              description:
-                'As opposed to pagination - infinite scroll means that new pages are loaded automatically when the scrollbar reaches to the end (assuming there is more data to load). The `infiniteScroll` prop instructs the table to not render all data on startup, but rather gradually. Notice that the infinite scroll should listen to some scroll events (in order to determine when to render new items). In this example, we pass a container with limited height - but it could be any element that triggers scroll events.',
-              source: TableInfiniteScrollExampleRaw,
               compact: true,
             },
             {
