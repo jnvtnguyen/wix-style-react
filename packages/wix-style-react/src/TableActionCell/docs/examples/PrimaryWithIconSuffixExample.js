@@ -8,14 +8,6 @@ import ChevronDownSmall from 'wix-ui-icons-common/ChevronDownSmall';
 const Example = () => (
   <div className={classes.exampleRow}>
     <TableActionCell
-      dataHook="story-primary-with-icon-prefix"
-      primaryAction={{
-        text: 'Prefix',
-        prefixIcon: <Add />,
-        onClick: () => window.alert('Primary action was triggered!'),
-      }}
-    />
-    <TableActionCell
       dataHook="story-primary-with-icon-suffix"
       primaryAction={{
         text: 'Suffix',

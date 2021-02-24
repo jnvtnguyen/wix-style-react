@@ -55,8 +55,8 @@ describe('Table Action Cell', () => {
     'Primary and secondary actions with RTL': 'story-primary-secondary-rtl',
     'Primary action disabled': 'story-primary-disabled',
     'Secondary actions disabled': 'story-disabled-secondary',
-    'Primary action icon prefix': 'story-primary-icon-prefix',
-    'Primary action icon suffix': 'story-primary-icon-suffix',
+    'Primary action icon prefix': 'story-primary-with-icon-prefix',
+    'Primary action icon suffix': 'story-primary-with-icon-suffix',
     'Primary action with only visible secondary actions':
       'story-primary-with-only-visible-secondary',
     'Small buttons': 'story-small-buttons',
