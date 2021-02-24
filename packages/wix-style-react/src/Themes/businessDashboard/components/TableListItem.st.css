@@ -18,11 +18,7 @@
 }
 
 .root:verticalPadding(small) {
-  padding: 0 0 value(SP3) 0;
-}
-
-.root:verticalPadding(small):not(:first-child) {
-  padding-top: value(SP3);
+  padding: value(SP3) 0;
 }
 
 .root:verticalPadding(small).align {
@@ -31,5 +27,4 @@
 
 .root:verticalPadding(small):clickable:hover{
   background-color: value(B50);
-  cursor: pointer;
 }
