@@ -1,21 +1,22 @@
 /* eslint-disable */
 
 () => {
-  const records = [
-    { firstName: "Meghana", lastName: "Bishop" },
-    { firstName: "Sara", lastName: "Porter" },
-    { firstName: "Deborah", lastName: "Rhodes" },
-    { firstName: "Walter", lastName: "Jenning" },
-  ];
-
   const [count, setCount] = React.useState(5);
   const [hasMore, setHasMore] = React.useState(true);
   const [container, setContainer] = React.useState(null);
 
+  const records = [
+    { firstName: 'Meghana', lastName: 'Bishop' },
+    { firstName: 'Sara', lastName: 'Porter' },
+    { firstName: 'Deborah', lastName: 'Rhodes' },
+    { firstName: 'Walter', lastName: 'Jenning' },
+  ];
+
   var containerRef = React.useRef(null);
+
   React.useEffect(() => setContainer(containerRef), []);
 
-  const renderToolbar = (selectionContext) => {
+  const renderToolbar = selectionContext => {
     return (
       <TableToolbar>
         <TableToolbar.ItemGroup position="start">
@@ -34,7 +35,7 @@
     }, 1000);
   };
 
-  const _generateData = (count) => {
+  const _generateData = count => {
     let data = [];
 
     for (let i = 0; i < count; i++) {
@@ -45,8 +46,8 @@
 
   return (
     <div
-      ref={(ref) => (containerRef = ref)}
-      style={{ maxHeight: "258px", overflow: "auto" }}
+      ref={ref => (containerRef = ref)}
+      style={{ maxHeight: '258px', overflow: 'auto' }}
     >
       <Card>
         <Table
@@ -59,8 +60,8 @@
           totalSelectableCount={180}
           data={_generateData(count)}
           columns={[
-            { title: "First", render: (row) => row.firstName },
-            { title: "Last", render: (row) => row.lastName },
+            { title: 'First', render: row => row.firstName },
+            { title: 'Last', render: row => row.lastName },
           ]}
         >
           <Table.ToolbarContainer>{renderToolbar}</Table.ToolbarContainer>

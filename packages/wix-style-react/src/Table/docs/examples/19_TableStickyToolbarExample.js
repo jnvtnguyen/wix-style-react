@@ -1,6 +1,8 @@
 /* eslint-disable */
 
 () => {
+  const [filterId, setFilterId] = React.useState(0);
+  const [searchTerm, setSearchTerm] = React.useState('');
   const [records, setRecords] = React.useState([
     {
       name: 'Red Slippers',
@@ -70,8 +72,6 @@
       width: '20%',
     },
   ];
-  const [filterId, setFilterId] = React.useState(0);
-  const [searchTerm, setSearchTerm] = React.useState('');
 
   const _getFilteredData = () => {
     let data = records;

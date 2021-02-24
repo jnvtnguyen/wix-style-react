@@ -1,25 +1,29 @@
 /* eslint-disable */
 
 () => {
-  const records = [
-    { firstName: "Meghana", lastName: "Bishop" },
-    { firstName: "Sara", lastName: "Porter" },
-    { firstName: "Deborah", lastName: "Rhodes" },
-    { firstName: "Walter", lastName: "Jenning" },
-  ];
-
   const [count, setCount] = React.useState(5);
   const [hasMore, setHasMore] = React.useState(true);
   const [container, setContainer] = React.useState(null);
+
+  const records = [
+    { firstName: 'Meghana', lastName: 'Bishop' },
+    { firstName: 'Sara', lastName: 'Porter' },
+    { firstName: 'Deborah', lastName: 'Rhodes' },
+    { firstName: 'Walter', lastName: 'Jenning' },
+  ];
+
   const containerRef = React.useRef(null);
+
   React.useEffect(() => setContainer(containerRef), []);
-  const generateData = (count) => {
+
+  const generateData = count => {
     let data = [];
     for (let i = 0; i < count; i++) {
       data = data.concat(records);
     }
     return data;
   };
+
   const data = generateData(count);
 
   const _loadMore = () => {
@@ -30,7 +34,7 @@
   };
 
   return (
-    <div ref={containerRef} style={{ maxHeight: "258px", overflow: "auto" }}>
+    <div ref={containerRef} style={{ maxHeight: '258px', overflow: 'auto' }}>
       <Table
         infiniteScroll
         loadMore={_loadMore}
@@ -39,8 +43,8 @@
         scrollElement={container && container.current}
         data={data}
         columns={[
-          { title: "First", render: (row) => row.firstName },
-          { title: "Last", render: (row) => row.lastName },
+          { title: 'First', render: row => row.firstName },
+          { title: 'Last', render: row => row.lastName },
         ]}
       >
         <Table.Content />

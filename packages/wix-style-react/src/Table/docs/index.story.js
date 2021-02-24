@@ -173,7 +173,7 @@ export default {
             {
               title: 'Action Cell',
               description:
-                'Use `<TableActionCell/>` to add actions to the last column of a row. Primary actions are displayed as buttons, whereas secondary actions as icon buttons. Use `numOfVisibleSecondaryActions` to limit the amount of visible actions. Hidden ones will appear inside a popover menu. See <TableActionCell/> for more details.',
+                'Use `<TableActionCell/>` to add actions to the last column of a row. Primary actions are displayed as buttons, whereas secondary actions as icon buttons. Use `numOfVisibleSecondaryActions` to limit the amount of visible actions. Hidden ones will appear inside a popover menu. See `<TableActionCell/>` for more details.',
               source: TableActionCellExample,
               compact: true,
             },
