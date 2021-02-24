@@ -47,8 +47,11 @@ import DisabledSecondaryExampleRaw from '!raw-loader!./examples/DisabledSecondar
 import DisabledPrimaryExample from './examples/DisabledPrimaryExample';
 import DisabledPrimaryExampleRaw from '!raw-loader!./examples/DisabledPrimaryExample';
 
-import PrimaryWithIconAffixExample from './examples/PrimaryWithIconAffixExample';
-import PrimaryWithIconAffixExampleRaw from '!raw-loader!./examples/PrimaryWithIconAffixExample';
+import PrimaryWithIconPrefixExample from './examples/PrimaryWithIconPrefixExample';
+import PrimaryWithIconPrefixExampleRaw from '!raw-loader!./examples/PrimaryWithIconPrefixExample';
+
+import PrimaryWithIconSuffixExample from './examples/PrimaryWithIconSuffixExample';
+import PrimaryWithIconSuffixExampleRaw from '!raw-loader!./examples/PrimaryWithIconSuffixExample';
 
 import SecondaryWithDividerExample from './examples/SecondaryWithDividerExample';
 import SecondaryWithDividerExampleRaw from '!raw-loader!./examples/SecondaryWithDividerExample';
@@ -226,10 +229,19 @@ export default {
 
       <div className={classes.example}>
         <CodeExample
-          title="Primary actions with an icon affix"
-          code={PrimaryWithIconAffixExampleRaw}
+          title="Primary actions with an icon prefix"
+          code={PrimaryWithIconPrefixExampleRaw}
         >
-          <PrimaryWithIconAffixExample />
+          <PrimaryWithIconPrefixExample />
+        </CodeExample>
+      </div>
+
+      <div className={classes.example}>
+        <CodeExample
+          title="Primary actions with an icon sufffix"
+          code={PrimaryWithIconSuffixExampleRaw}
+        >
+          <PrimaryWithIconSuffixExample />
         </CodeExample>
       </div>
 
