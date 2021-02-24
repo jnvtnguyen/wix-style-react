@@ -34,6 +34,7 @@ import TableWithBulkSelectionExample from '!raw-loader!./examples/12_TableWithBu
 import TableSubtoolbarExample from '!raw-loader!./examples/13_TableSubtoolbarExample';
 import TableInfiniteScrollExample from '!raw-loader!./examples/14_TableInfiniteScrollExample';
 import TableInfiniteScrollAndBulkSelection from '!raw-loader!./examples/15_TableInfiniteScrollAndBulkSelection';
+import TablePaginationExample from '!raw-loader!./examples/16_TablePaginationExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TableEmptyStateExampleRaw from '!raw-loader!./examples/TableEmptyStateExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
@@ -231,6 +232,13 @@ In case of vertical alignment of content within cell - it should be done within 
               description:
                 'Sample table below has infiniteScroll and showSelection set. If user clicks the bulk selection checkbox when the data is not fully loaded yet (hasMore is true) only loaded items are selected by default. If user clicks the bulk selection checkbox when the data is not fully loaded yet, but the table has a `totalSelectableCount` set, then the grid enters an “infinite bulk selection” mode. It assumes all items are selected, and it only keeps track of the items manually unselected by the user. Newly loaded items are being selected by default. `SelectionContext.selectedCount` will be updated based on the `totalSelectableCount` prop.',
               source: TableInfiniteScrollAndBulkSelection,
+              compact: true,
+            },
+            {
+              title: 'Pagination',
+              description:
+                'Add `<Pagination/>` to the table to split up a large data set across multiple pages.',
+              source: TablePaginationExample,
               compact: true,
             },
             {
