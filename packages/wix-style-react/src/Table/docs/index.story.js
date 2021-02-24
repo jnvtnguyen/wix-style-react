@@ -37,6 +37,7 @@ import TableInfiniteScrollAndBulkSelection from '!raw-loader!./examples/15_Table
 import TablePaginationExample from '!raw-loader!./examples/16_TablePaginationExample';
 import TableEmptyStateExample from '!raw-loader!./examples/17_TableEmptyStateExample';
 import TableVerticalCellAlignmentExample from '!raw-loader!./examples/18_TableVerticalCellAlignmentExample';
+import TableStickyToolbarExample from '!raw-loader!./examples/19_TableStickyToolbarExample.js';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
@@ -254,6 +255,13 @@ In case of vertical alignment of content within cell - it should be done within 
               description:
                 'If we want to align cell content vertically it should be done within the render method explicitly.',
               source: TableVerticalCellAlignmentExample,
+              compact: true,
+            },
+            {
+              title: 'Sticky Toolbar & Sub-toolbar',
+              description:
+                'This example demonstrates how to render a table with a sticky title and toolbar within `<Page/>`. Notice that `<Page/>` is practically responsible to render the title, using `<Page.Header/>` whereas titleBarVisible is false. Moreover, we use `<Page.Sticky/>` in order to stick the toolbar and sub-toolbar to the top while scrolling.',
+              source: TableStickyToolbarExample,
               compact: true,
             },
             {
