@@ -39,9 +39,9 @@ import TableEmptyStateExample from '!raw-loader!./examples/17_TableEmptyStateExa
 import TableVerticalCellAlignmentExample from '!raw-loader!./examples/18_TableVerticalCellAlignmentExample';
 import TableStickyToolbarExample from '!raw-loader!./examples/19_TableStickyToolbarExample.js';
 import TableWithAdvancedFiltersExample from '!raw-loader!./examples/20_TableWithAdvancedFiltersExample';
+import TableVirtualizationExample from '!raw-loader!./examples/21_TableVirtualizationExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
-import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
 
 const code = config =>
   baseCode({
@@ -305,7 +305,7 @@ In case of vertical alignment of content within cell - it should be done within 
               sections: [
                 ...[
                   {
-                    source: TableVirtualizationExampleRaw,
+                    source: TableVirtualizationExample,
                     compact: true,
                   },
                 ].map(code),
