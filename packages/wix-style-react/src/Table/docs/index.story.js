@@ -35,8 +35,8 @@ import TableSubtoolbarExample from '!raw-loader!./examples/13_TableSubtoolbarExa
 import TableInfiniteScrollExample from '!raw-loader!./examples/14_TableInfiniteScrollExample';
 import TableInfiniteScrollAndBulkSelection from '!raw-loader!./examples/15_TableInfiniteScrollAndBulkSelection';
 import TablePaginationExample from '!raw-loader!./examples/16_TablePaginationExample';
+import TableEmptyStateExample from '!raw-loader!./examples/17_TableEmptyStateExample';
 import TableHideHeaderExampleRaw from '!raw-loader!./examples/TableHideHeaderExample';
-import TableEmptyStateExampleRaw from '!raw-loader!./examples/TableEmptyStateExample';
 import TablePageExampleRaw from '!raw-loader!./examples/TablePageExample';
 import TableVirtualizationExampleRaw from '!raw-loader!./examples/TableVirtualizationExample';
 
@@ -242,16 +242,16 @@ In case of vertical alignment of content within cell - it should be done within 
               compact: true,
             },
             {
-              title: 'Hidden Header',
-              description: 'A table with hidden header.',
-              source: TableHideHeaderExampleRaw,
+              title: 'Empty State',
+              description:
+                'This example shows the usage for displaying an empty state message. Notice that `<Card/>` and `<TableToolbar/>` are optional - we should use them as necessary.',
+              source: TableEmptyStateExample,
               compact: true,
             },
             {
-              title: 'Table with EmptyState',
-              description:
-                'This example shows the usage for displaying an empty state message. Notice that `<Card/>` and `<TableToolbar/>` are optional - we should use them as necessary.',
-              source: TableEmptyStateExampleRaw,
+              title: 'Hidden Header',
+              description: 'A table with hidden header.',
+              source: TableHideHeaderExampleRaw,
               compact: true,
             },
             {
