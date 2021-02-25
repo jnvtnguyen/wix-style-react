@@ -1,7 +1,13 @@
 /* eslint-disable */
 
 () => {
-  const [filterId, setFilterId] = React.useState(0);
+  const filterOptions = [
+    { id: 'In Stock, Out Of Stock', value: 'In Stock, Out Of Stock' },
+    { id: 'In Stock', value: 'In Stock' },
+    { id: 'Out Of Stock', value: 'Out Of Stock' },
+  ];
+
+  const [activeFilter, setActiveFilter] = React.useState(filterOptions[0].id);
   const [searchTerm, setSearchTerm] = React.useState('');
   const [records, setRecords] = React.useState([
     {
@@ -9,51 +15,37 @@
       SKU: '0231664667',
       price: '$14.00',
       inventory: 'In Stock',
-      collectionId: 1,
-            filterId: 2,
-
     },
     {
       name: 'Velvet Hat',
       SKU: '0231664669',
       price: '$23.00',
       inventory: 'In Stock',
-      collectionId: 1,
-      filterId: 2,
     },
     {
       name: 'Silver Jeans',
       SKU: '0231664667',
       price: '$69.00',
       inventory: 'In Stock',
-      collectionId: 2,
-            filterId: 2,
-
     },
     {
       name: 'Orange Stocks',
       SKU: '0231664671',
       price: '$9.00',
       inventory: 'Out Of Stock',
-      collectionId: 2,
-      filterId: 1,
     },
     {
       name: 'Black T-shirts',
       SKU: '0231664672',
       price: '$19.00',
       inventory: 'In Stock',
-      collectionId: 2,
-      filterId: 1,
     },
   ]);
 
   const columns = [
     {
       title: 'Name',
-      render: row => (
-        <Highlighter match={searchTerm}>{row.name}</Highlighter>
-      ),
+      render: row => <Highlighter match={searchTerm}>{row.name}</Highlighter>,
       width: '30%',
     },
     {
@@ -74,19 +66,16 @@
   ];
 
   const _getFilteredData = () => {
-    let data = records;
-
-    if (filterId > 0) {
-      data = data.filter(row => row.filterId === filterId);
-    }
-
+    let filteredData = records;
+    if (activeFilter !== 'In Stock, Out Of Stock') {
+      filteredData = filteredData.filter(row => row.inventory === activeFilter);
+    } 
     if (searchTerm !== '') {
-      data = data.filter(row =>
+      filteredData = filteredData.filter(row =>
         row.name.toUpperCase().includes(searchTerm.toUpperCase()),
       );
     }
-
-    return data;
+    return filteredData;
   };
 
   const filteredData = _getFilteredData();
@@ -128,12 +117,6 @@
   );
 
   const _renderMainToolbar = () => {
-    const filterOptions = [
-      { id: 0, value: 'In Stock, Out Of Stock' },
-      { id: 1, value: 'In Stock' },
-      { id: 2, value: 'Out Of Stock' },
-    ];
-
     return (
       <Card>
         <TableToolbar>
@@ -144,9 +127,10 @@
                 <span style={{ width: '150px' }}>
                   <Dropdown
                     options={filterOptions}
-                    selectedId={filterId}
+                    selectedId={activeFilter}
                     onSelect={selectedOption => {
-                      this.setState({ filterId: selectedOption.id });
+                      console.log(selectedOption);
+                      setActiveFilter(selectedOption.value);
                     }}
                     roundInput
                   />
