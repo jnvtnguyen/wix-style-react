@@ -6,6 +6,25 @@ import * as businessDashboard from '../../src/Themes/businessDashboard';
 import * as floatingPanels from '../../src/Themes/floatingPanels';
 import AtlasAddressInput from '../../src/AtlasAddressInput';
 
+const Endpoints = {
+  '/api/table': [
+    { firstName: 'Meghana', lastName: 'Bishop' },
+    { firstName: 'Sara', lastName: 'Porter' },
+    { firstName: 'Deborah', lastName: 'Rhodes' },
+    { firstName: 'Walter', lastName: 'Jenning' },
+  ],
+};
+
+const StorybookUtils = {
+  fetch: api =>
+    new Promise((resolve, reject) => {
+      if (Endpoints[api]) {
+        return resolve(Endpoints[api]);
+      }
+      return resolve(null);
+    }),
+};
+
 // Internal Wix components which depend on private Wix dependencies
 const privateComponents = {
   AtlasAddressInput,
@@ -20,6 +39,7 @@ const defaultComponents = {
   ...privateComponents,
   Icons,
   SystemIcons,
+  StorybookUtils,
 };
 
 export default defaultComponents;

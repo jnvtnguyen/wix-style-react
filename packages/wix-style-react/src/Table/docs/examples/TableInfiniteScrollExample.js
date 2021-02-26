@@ -1,16 +1,15 @@
 /* eslint-disable */
 
 class TableInfiniteScrollExample extends React.Component {
-  baseData = [
+  state = {
+    count: 5,
+    hasMore: true,
+    baseData: [
     { firstName: 'Meghan', lastName: 'Bishop' },
     { firstName: 'Sara', lastName: 'Porter' },
     { firstName: 'Deborah', lastName: 'Rhodes' },
     { firstName: 'Walter', lastName: 'Jenning' },
-  ];
-
-  state = {
-    count: 5,
-    hasMore: true,
+  ],
   };
 
   componentDidMount() {
@@ -35,7 +34,7 @@ class TableInfiniteScrollExample extends React.Component {
           // Indicates if there is more data to load
           hasMore={hasMore}
           // Function to be called on load
-          loadMore={this._loadMore}
+          loadMore={this._fetchMoreData}
           // Element with scroll events for listening
           scrollElement={container}
         >
@@ -45,21 +44,17 @@ class TableInfiniteScrollExample extends React.Component {
     );
   }
 
-  _loadMore = () => {
-    // Simulates asynchronous loading of data
-    setTimeout(() => {
-      this.setState(
-        { count: this.state.count + 5 },
-        () => this.state.count > 40 && this.setState({ hasMore: false }),
-      );
-    }, 1000);
+  _fetchMoreData = async (baseData) => {
+    const loaded = 10;
+    const newData = await StorybookUtils.fetch('/api/table', { load: loaded + 5 });
+    this.setState({baseData: newData});
   };
 
   _generateData = count => {
     let data = [];
 
     for (let i = 0; i < count; i++) {
-      data = data.concat(this.baseData);
+      data = data.concat(this.state.baseData);
     }
 
     return data;
