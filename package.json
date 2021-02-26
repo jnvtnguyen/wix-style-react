@@ -70,7 +70,6 @@
     "@wix/ambassador-wix-atlas-service-web": "^1.0.150",
     "@wix/npm-blame": "^1.0.509",
     "@wix/perfer": "^1.0.168",
-    "@wix/wix-base-ui": "^3.949.0",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.2.2",
     "babel-plugin-dynamic-import-node": "^2.3.3",
