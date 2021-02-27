@@ -16,13 +16,22 @@ const Endpoints = {
 };
 
 const StorybookUtils = {
-  fetch: api =>
-    new Promise((resolve, reject) => {
+  fetch: (api, options) => {
+    let EndpointsArray = Endpoints[api];
+
+    if (options) {
+      for (let i = 1; i <= options.load; i++) {
+        EndpointsArray = EndpointsArray.concat(Endpoints[api]);
+      }
+    }
+
+    return new Promise((resolve, reject) => {
       if (Endpoints[api]) {
-        return resolve(Endpoints[api]);
+        return resolve(EndpointsArray);
       }
       return resolve(null);
-    }),
+    });
+  },
 };
 
 // Internal Wix components which depend on private Wix dependencies
