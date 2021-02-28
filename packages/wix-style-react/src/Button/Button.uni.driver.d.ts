@@ -6,6 +6,8 @@ export interface ButtonUniDriver extends BaseUniDriver {
   isButtonDisabled: () => Promise<boolean>;
   isFocused: () => Promise<boolean>;
   hasSkin: (skinName: ButtonSkin) => Promise<boolean>;
+  isPrefixIconExists: () => Promise<boolean>;
+  isSuffixIconExists: () => Promise<boolean>;
 }
 
 export const buttonDriverFactory: (base: BaseUniDriver) => ButtonUniDriver;
