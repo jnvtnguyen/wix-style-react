@@ -15,7 +15,10 @@ Types of changes:
 1. **Lab** components and features that are still in a work in progress
 
 ## Next
-
+### Fixed
+- `<Badge/>`-  fix font color when it is wider then max width [#6809](https://github.com/wix/wix-style-react/pull/6809)
+- `<Badge/>`-  fix icon to correct size [#6823](https://github.com/wix/wix-style-react/pull/6823)
+- `<Modal/>` - fix closing nested modals [#6839](https://github.com/wix/wix-style-react/pull/6839)
 
 ## 9.85.0 - 2021-02-23
 ### Added

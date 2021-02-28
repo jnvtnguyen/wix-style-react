@@ -206,7 +206,6 @@ const ErrorSuffix = ({
   errorTooltipPlacement,
 }) => (
   <Tooltip
-    appendTo="scrollParent"
     placement={errorTooltipPlacement}
     skin={TooltipSkin.Error}
     content={errorMessage}

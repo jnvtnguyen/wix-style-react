@@ -9,10 +9,15 @@ import { ZIndex } from '../ZIndex';
 import { FontUpgradeContext } from '../FontUpgrade/context';
 import FontUpgrade from '../FontUpgrade';
 import { ThemeProviderConsumerBackwardCompatible } from '../ThemeProvider/ThemeProviderConsumerBackwardCompatible';
-
-const CHILDREN_WRAPPER_DIV_ID = 'modal-children-container';
+import uniqueId from 'lodash/uniqueId';
 
 class Modal extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.CHILDREN_WRAPPER_DIV_ID = uniqueId('wsr-modal');
+  }
+
   static propTypes = {
     /** Applied as data-hook HTML attribute that can be used to create driver in testing */
     dataHook: PropTypes.string,
@@ -175,7 +180,7 @@ class Modal extends React.PureComponent {
                         this.renderCloseButton()}
                       <div
                         data-scrollable={scrollable || null}
-                        id={CHILDREN_WRAPPER_DIV_ID}
+                        id={this.CHILDREN_WRAPPER_DIV_ID}
                         className={st(classes.childrenContainer, {
                           screen,
                         })}
@@ -198,7 +203,7 @@ class Modal extends React.PureComponent {
     const { shouldCloseOnOverlayClick, onRequestClose } = this.props;
     if (
       shouldCloseOnOverlayClick &&
-      event.target.id === CHILDREN_WRAPPER_DIV_ID &&
+      event.target.id === this.CHILDREN_WRAPPER_DIV_ID &&
       onRequestClose
     ) {
       onRequestClose();

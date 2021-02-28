@@ -43,7 +43,7 @@ Moreover, if you want to see specific examples, our tests are available and well
 
 ### Frequently Asked Questions ❓
 
-You may find an answer to your question at the [Frequently Asked Questions](https://github.com/wix/wix-style-react/tree/master/docs/FAQ#frequently-asked-questions) article.
+You may find an answer to your question at the [Frequently Asked Questions](https://github.com/wix/wix-style-react/tree/master/packages/wix-style-react/docs/FAQ#frequently-asked-questions) article.
 
 ### Playground 🏀
 
@@ -76,23 +76,23 @@ When you run into an issue, don't panic 🤗. We have some recommendations how t
 If you **suspect** the issue you encountered is related to the component or testkit, before you report an issue, try to verify it by:
 
 *   Recreate the issue in our playground.
-*   Pin Wix Style React version to a prior one, in order to see if there's no issue there. Note that you can check out the [CHANGELOG](https://github.com/wix/wix-style-react/blob/master/CHANGELOG.md) to view the changes of each released version.
+*   Pin Wix Style React version to a prior one, in order to see if there's no issue there. Note that you can check out the [CHANGELOG](https://github.com/wix/wix-style-react/blob/master/packages/wix-style-react/CHANGELOG.md) to view the changes of each released version.
 
 Once you're absolutely sure the issue is ours, please let us know through the channel or by reporting an issue.
 
 ### Reporting an issue ![github-mark](/GitHub-Mark-32px.png)
 
-We use GitHub issues as bugs and feature requests tracker.
-If you think you have found a bug, or have a new feature idea- please start by making sure it hasn't already been [reported or fixed](https://github.com/wix/wix-style-react/issues).
+We use Jira as bugs and feature requests tracker.
+If you think you have found a bug, or have a new feature idea- please start by making sure it hasn't already been [reported or fixed](https://jira.wixpress.com/secure/RapidBoard.jspa?rapidView=2394&projectKey=DSM&view=planning&selectedIssue=DSM-1118&issueLimit=100).
 You can search through existing issues and pull requests to see if someone has reported a similar issue to yours.
 
 If it does not exist, please follow the following guidelines:
 
-*   Click [here](https://github.com/wix/wix-style-react/issues/new/choose) to choose the relevant issue template.
+*   Click [here](http://wix.to/i0DYB4w) to get the relevant issue template.
 
 *   Please begin the title with `<ComponentName/>` where appropriate, and use a succinct description that helps others find similar issues.
-    *   `<FilePicker/>`- `<some feature>` doesn't work ❌ [(Example)](https://github.com/wix/wix-style-react/issues/6202)
-    *   `<Table/>` - Add support for `<some feature>` ✅ [(Example)](https://github.com/wix/wix-style-react/issues/5668)
+    *   `<FilePicker/>`- `<some feature>` doesn't work ❌
+    *   `<Table/>` - Add support for `<some feature>` ✅
 
 *   Please don't group multiple topics in one issue – each issue should have its own github issue.
 
@@ -100,7 +100,7 @@ If it does not exist, please follow the following guidelines:
 
 #### Have you managed to resolve the issue?
 
-*   ✅ A contribution to our [Frequently Asked Questions](https://github.com/wix/wix-style-react/tree/master/docs/FAQ#frequently-asked-questions) article is welcome! Check out our [contribution guide](https://github.com/wix/wix-style-react/blob/master/CONTRIBUTING.md) for more information.
+*   ✅ A contribution to our [Frequently Asked Questions](https://github.com/wix/wix-style-react/tree/master/packages/wix-style-react/docs/FAQ#frequently-asked-questions) article is welcome! Check out our [contribution guide](https://github.com/wix/wix-style-react/blob/master/packages/wix-style-react/CONTRIBUTING.md) for more information.
 *   ❌ Create [a GitHub issue](#reporting-an-issue-github-mark).
 
 ### Wix Employees
@@ -127,9 +127,6 @@ The current status of each Wix Style React version is as follows:
 
 ### Upgrade from older versions
 
-Read and follow our migration guides:
+Read and follow our migration guide:
 
-*   From 7.x to 8.x/9.x read [V8/V9 migration guide](https://github.com/wix/wix-style-react/blob/master/MIGRATION.md)
-*   From 6.x to 7.x read [V7 migration guide](https://github.com/wix/wix-style-react/blob/version\_7.x/docs/migration/v6-v7.md)
-*   From 5.x to 6.x read [V6 migration guide](https://github.com/wix/wix-style-react/blob/version\_7.x/docs/migration/v5-v6.md)
-*   From 4.x to 5.x read [V5 migration guide](https://github.com/wix/wix-style-react/blob/version\_7.x/docs/migration/v4-v5.md)
+*   From 7.x to 8.x/9.x read [V8/V9 migration guide](https://github.com/wix/wix-style-react/blob/master/packages/wix-style-react/MIGRATION.md)

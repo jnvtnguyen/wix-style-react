@@ -7,6 +7,7 @@ interface RelativeMediaImageProps extends Omit<ImageProps, 'width' | 'height'> {
   sourceDimensions: Dimensions;
   containerDimensions: Dimensions;
   isPlaceholderDisplayed?: boolean;
+  nativeRef?: React.Ref<HTMLImageElement>;
 }
 
 const Placeholder = ({
@@ -44,6 +45,7 @@ export class RelativeMediaImage extends React.Component<RelativeMediaImageProps>
       isPlaceholderDisplayed,
       focalPoint,
       onLoad,
+      nativeRef,
       ...imageProps
     } = this.props;
 
@@ -57,6 +59,7 @@ export class RelativeMediaImage extends React.Component<RelativeMediaImageProps>
               sourceDimensions={sourceDimensions}
               containerDimensions={containerDimensions}
               focalPoint={focalPoint}
+              nativeRef={nativeRef}
               {...imageProps}
             />
           )}

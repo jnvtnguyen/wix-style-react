@@ -47,7 +47,6 @@
     "test:e2e-only": "NODE_ENV=production yoshi test --protractor",
     "pretest:visual": "npm run generate-autodocs-registry",
     "test:visual": "eyes-storybook -c ./.storybook/visual",
-    "test:chromatic": "chromatic --build-script-name=storybook:build-visual --app-code=$CHROMATIC_WIX_STYLE_REACT",
     "test:types": "tsc -p tsconfig.declarations.json",
     "test:swimm": "SWIMM_PATH=./node_modules/.bin/swimm_cli && ./scripts/get-swimm.sh $SWIMM_PATH $FORCE && ./scripts/run-swimm.sh $SWIMM_PATH",
     "test:performance": "npm run transpile && npm run bundles:generate && npm install --no-save @wix/perfer && perfer --verbose",
@@ -175,7 +174,6 @@
     "rimraf": "^2.7.1",
     "sinon": "^1.17.7",
     "storybook-addon-i18n": "^5.1.13",
-    "storybook-chromatic": "^3.5.5",
     "storybook-snapper": "^1.0.66",
     "stylelint": "^13.9.0",
     "stylelint-no-unsupported-browser-features": "^4.1.4",
@@ -185,12 +183,12 @@
     "webpack-cli": "^3.3.12",
     "wix-storybook-utils": "^3.0.139",
     "wix-ui-framework": "^3.5.2",
-    "yoshi": "^4.87.0",
+    "yoshi": "^4.9.0",
     "yoshi-config": "^4.87.0",
     "yoshi-flow-library": "^4.87.0",
     "yoshi-helpers": "^4.87.0",
     "yoshi-runtime": "1.0.732",
-    "yoshi-style-dependencies": "^4.71.0"
+    "yoshi-style-dependencies": "^4.228.0"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17.0.0",
@@ -246,7 +244,7 @@
     "wix-ui-core": "^3.0.186",
     "wix-ui-icons-common": "^2.0.308",
     "wix-ui-test-utils": "^1.0.178",
-    "yoshi-stylable-dependencies": "^4.0.0"
+    "yoshi-stylable-dependencies": "^4.86.0"
   },
   "eslintConfig": {
     "extends": [

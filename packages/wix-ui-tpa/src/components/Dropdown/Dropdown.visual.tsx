@@ -5,6 +5,7 @@ import { VisualTestContainer } from '../../../test/visual/VisualTestContainer';
 import { Dropdown } from './';
 import { optionsWithSections, simpleOptions } from './helpers';
 import { ReactComponent as Heart } from '../../assets/icons/Heart.svg';
+import { classes } from './Dropdown.visual.st.css';
 
 const optionsWithIconAndSubtitles = [
   {
@@ -100,5 +101,16 @@ visualize('Dropdown', () => {
     getTests(true).map((testConfig) => {
       snap(testConfig.it, <DropdownVisual {...testConfig.props} />);
     });
+  });
+
+  story('wired', () => {
+    snap('error should always show red border', () => (
+      <DropdownVisual
+        error
+        errorMessage={'Error message'}
+        options={simpleOptions}
+        className={classes.root}
+      />
+    ));
   });
 });

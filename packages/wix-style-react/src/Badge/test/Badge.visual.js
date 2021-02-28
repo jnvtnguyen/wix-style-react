@@ -13,7 +13,9 @@ export const runTests = (
       testWithTheme(<BadgesVariations children="Some Badge" />),
     );
     snap('ellipsis', () =>
-      testWithTheme(<BadgesVariations children="I'm a Badge with ellipsis!" />),
+      testWithTheme(
+        <BadgesVariations children="I'm a Badge with a long text and ellipsis!" />,
+      ),
     );
     snap('Affixes', () =>
       testWithTheme(
@@ -32,7 +34,7 @@ export const runTests = (
   const types = Object.keys(TYPE);
 
   const renderBadge = props => (
-    <span style={{ padding: '5px', maxWidth: '150px' }}>
+    <span style={{ padding: '5px', maxWidth: '180px' }}>
       <Badge {...props}></Badge>
     </span>
   );

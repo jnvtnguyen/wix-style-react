@@ -5,7 +5,7 @@
 
 :import {
     -st-from: "../../common/palette.st.css";
-    -st-named: errorColor, successColor;
+    -st-named: errorColor, successColor, focusRing;
 }
 
 /*Defaults*/
@@ -109,6 +109,10 @@
 .textArea::-webkit-input-placeholder
 {
     color: value(placeholderColor);
+}
+
+.focused {
+    -st-mixin: focusRing();
 }
 
 .errorIconWrapper {

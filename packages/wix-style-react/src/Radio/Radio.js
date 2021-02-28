@@ -51,8 +51,6 @@ const Radio = ({
       data-hook={dataHook}
       onClick={_onClick}
       aria-checked={!!checked}
-      onFocus={focusableOnFocus}
-      onBlur={focusableOnBlur}
     >
       <input
         type="radio"
@@ -64,6 +62,8 @@ const Radio = ({
         name={name}
         id={id}
         onChange={() => null}
+        onFocus={focusableOnFocus}
+        onBlur={focusableOnBlur}
       />
       <span className={classes.icon} data-hook={dataHooks.icon}></span>
       {label && (

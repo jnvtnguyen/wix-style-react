@@ -33,7 +33,7 @@
   justify-content: center;
   box-sizing: border-box;
   line-height: 1;
-  max-width: 100%
+  max-width: 100%;
 }
 
 /* Focus when clickable */
@@ -52,18 +52,15 @@
   borderColor: grey;
   color: value(D80);
   padding: 5px 12px;
-  medium: 4px 12px;
-  small: 1px 6px;
-}
-
-.root >:not(:last-child) {
-  margin-inline-end: 6px;
+  medium: 0px 12px;
+  small: 0px 6px;
+  mediumHeight: 24px;
+  smallHeight: 18px;
 }
 
 .prefix, .suffix {
-  width: 12px;
-  height: 12px;
   fill: currentColor;
+  flex-shrink: 0;
 }
 
 .BadgeStyle {
@@ -79,6 +76,11 @@
 .root .text {
   color: currentColor;
   letter-spacing: 1px;
+  margin: auto 0px;
+}
+
+.root >:not(:last-child) {
+  margin-inline-end: 6px;
 }
 
 .root:uppercase .text {
@@ -400,14 +402,20 @@
   );
 }
 
+.BadgeStyle .text {
+  color: value(color);
+}
+
 /* size = medium */
 .root:size(medium) {
   padding: value(medium);
+  height: value(mediumHeight);
 }
 
 /* size = small */
 .root:size(small) {
   padding: value(small);
+  height: value(smallHeight);
 }
 
 /* cursor = pointer */
