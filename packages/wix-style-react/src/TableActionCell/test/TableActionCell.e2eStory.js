@@ -18,7 +18,8 @@ import PrimaryWithOnlyVisibleSecondaryExample from '../docs/examples/PrimaryWith
 import PrimarySecondaryRTLExample from '../docs/examples/PrimarySecondaryRTLExample';
 import DisabledSecondaryExample from '../docs/examples/DisabledSecondaryExample';
 import DisabledPrimaryExample from '../docs/examples/DisabledPrimaryExample';
-import PrimaryWithIconAffixExample from '../docs/examples/PrimaryWithIconAffixExample';
+import PrimaryWithIconPrefixExample from '../docs/examples/PrimaryWithIconPrefixExample';
+import PrimaryWithIconSuffixExample from '../docs/examples/PrimaryWithIconSuffixExample';
 import SmallButtonsExample from '../docs/examples/SmallButtonsExample';
 
 const kind = getTestStoryKind(storySettings);
@@ -92,8 +93,14 @@ storiesOf(kind, module).add(testStories.tableActionCell, () => (
     </div>
 
     <div className={classes.example}>
-      <CodeExample title="Primary action icon affix">
-        <PrimaryIconAffixExample />
+      <CodeExample title="Primary action icon prefix">
+        <PrimaryWithIconPrefixExample />
+      </CodeExample>
+    </div>
+
+    <div className={classes.example}>
+      <CodeExample title="Primary action icon suffix">
+        <PrimaryWithIconSuffixExample />
       </CodeExample>
     </div>
 
