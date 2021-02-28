@@ -41,9 +41,9 @@ describe(HorizontalTimeline.displayName, () => {
     expect(await driver.exists()).toBe(true);
   });
 
-  it('should render timeline with basic item', async () => {
+  it('should be able to get label text', async () => {
     const { driver } = render(<HorizontalTimeline items={items} />);
 
-    expect(await driver.getLabelText(0)).toEqual(items[0].label);
+    expect(await driver.getLabel(0)).toEqual(items[0].label);
   });
 });
