@@ -7,8 +7,8 @@ export interface TableActionCellDriver<T> extends BaseDriver {
   exists: () => boolean;
   clickPrimaryActionButton: () => void;
   getIsPrimaryActionButtonDisabled: () => boolean;
-  getIsPrimaryActionButtonPrefixIconExists: () => boolean;
-  getIsPrimaryActionButtonSuffixIconExists: () => boolean;
+  primaryActionButtonPrefixIconExists: () => boolean;
+  primaryActionButtonSuffixIconExists: () => boolean;
   getVisibleActionsCount: () => number;
   getHiddenActionsCount: () => number;
   getVisibleActionTooltipDriver: (

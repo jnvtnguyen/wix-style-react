@@ -57,10 +57,10 @@ const tableActionCellDriverFactory = ({ element, wrapper, eventTrigger }) => {
     getIsPrimaryActionButtonDisabled: () =>
       getPrimaryActionButtonDriver().isButtonDisabled(),
     /** Get whether the primary action button prefix icon exists */
-    getIsPrimaryActionButtonPrefixIconExists: () =>
+    primaryActionButtonPrefixIconExists: () =>
       getPrimaryActionButtonDriver().isPrefixIconExists(),
     /** Get whether the primary action button suffix icon exists */
-    getIsPrimaryActionButtonSuffixIconExists: () =>
+    primaryActionButtonSuffixIconExists: () =>
       getPrimaryActionButtonDriver().isSuffixIconExists(),
     /** Get the number of the visible secondary actions */
     getVisibleActionsCount: () => visibleActions().length,
