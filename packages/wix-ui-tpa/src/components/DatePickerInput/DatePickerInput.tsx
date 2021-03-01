@@ -3,7 +3,9 @@ import { TPAComponentProps } from '../../types';
 import { TPAComponentsConsumer } from '../TPAComponentsConfig';
 
 import { Locale as DateFnsLocale } from 'date-fns';
-import WSRDatePicker from 'wix-style-react/dist/src/DatePicker';
+import WSRDatePicker, {
+  LanguageType as WSRLanguageType,
+} from 'wix-style-react/dist/src/DatePicker';
 import { AppendTo } from 'wix-ui-core/popover';
 import { TextField } from '../TextField/TextField';
 import { TextFieldTheme } from '../TextField/TextFieldEnums';
@@ -12,25 +14,7 @@ import { ReactComponent as Calendar } from '../../assets/icons/Calendar.svg';
 import { st, classes } from './DatePickerInput.st.css';
 import { DATA_HOOKS } from './constants';
 
-export type LanguageType =
-  | 'en'
-  | 'es'
-  | 'pt'
-  | 'fr'
-  | 'de'
-  | 'pl'
-  | 'it'
-  | 'ru'
-  | 'ja'
-  | 'ko'
-  | 'tr'
-  | 'sv'
-  | 'no'
-  | 'nl'
-  | 'da'
-  | 'zh'
-  | 'th'
-  | 'cs';
+export type LanguageType = WSRLanguageType;
 export type Locale = LanguageType | DateFnsLocale;
 export type FirstDayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 export type popoverPlacementType = 'bottom-start' | 'bottom-end';

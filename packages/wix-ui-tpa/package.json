@@ -73,7 +73,6 @@
   },
   "dependencies": {
     "@stylable/dom-test-kit": "^3.11.14",
-    "@date-fns/upgrade": "^1.0.3",
     "classnames": "^2.2.6",
     "focus-trap": "^5.1.0",
     "lodash": "^4.17.11",

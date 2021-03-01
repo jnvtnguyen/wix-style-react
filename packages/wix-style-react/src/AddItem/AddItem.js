@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { withFocusable } from 'wix-ui-core/dist/src/hocs/Focusable/FocusableHOC';
 import { ThemeProviderConsumerBackwardCompatible } from '../ThemeProvider/ThemeProviderConsumerBackwardCompatible';
+import Image from '../Image';
 
 import AddItemLarge from 'wix-ui-icons-common/system/AddItemLarge';
 import AddItemMedium from 'wix-ui-icons-common/system/AddItemMedium';
@@ -16,6 +17,7 @@ import { dataHooks } from './constants';
 import { TooltipCommonProps } from '../common/PropTypes/TooltipCommon';
 
 import { st, classes } from './AddItem.st.css';
+import { isString } from '../utils/StringUtils';
 
 const AddItemButtonIcons = {
   tiny: ({ className }) => <Add className={className} width="26" height="26" />,
@@ -25,6 +27,13 @@ const AddItemButtonIcons = {
   image: ({ className }) => (
     <AddMedia className={className} width="31" height="31" />
   ),
+};
+
+const illustrationDimensions = {
+  tiny: { height: 24, width: 24 },
+  small: { height: 60, width: 60 },
+  medium: { height: 120, width: 120 },
+  large: { height: 120, width: 120 },
 };
 
 const tooltipPlacementByAlignment = {
@@ -82,6 +91,9 @@ class AddItem extends Component {
 
     /** Subtitle of the component */
     subtitle: PropTypes.node,
+
+    /** The illustraion icon src or node */
+    icon: PropTypes.node,
   };
 
   static defaultProps = {
@@ -92,7 +104,7 @@ class AddItem extends Component {
     removePadding: false,
   };
 
-  _renderIcon = () => {
+  _renderDefaultIcon = () => {
     const { size, theme } = this.props;
 
     const isImageIcon = theme === 'image';
@@ -109,6 +121,29 @@ class AddItem extends Component {
         }}
       </ThemeProviderConsumerBackwardCompatible>
     );
+  };
+
+  _renderIllustration = () => {
+    const { icon, size } = this.props;
+
+    return (
+      <Image
+        className={classes.illustration}
+        fit="contain"
+        src={icon}
+        {...illustrationDimensions[size]}
+      />
+    );
+  };
+
+  _renderIcon = () => {
+    const { icon } = this.props;
+
+    if (!icon) {
+      return this._renderDefaultIcon();
+    }
+
+    return isString(icon) ? this._renderIllustration() : icon;
   };
 
   _renderText = () => {
@@ -205,6 +240,8 @@ class AddItem extends Component {
       className,
       ariaLabel,
       ariaLabelledBy,
+      size,
+      alignItems,
     } = this.props;
 
     return (
@@ -216,7 +253,7 @@ class AddItem extends Component {
         <button
           className={st(
             classes.root,
-            { theme, removePadding, borderRadius, disabled },
+            { theme, size, removePadding, borderRadius, disabled, alignItems },
             className,
           )}
           style={borderRadius && { borderRadius }}

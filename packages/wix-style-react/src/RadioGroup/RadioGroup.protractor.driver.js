@@ -1,30 +1,23 @@
 import { isFocused } from 'wix-ui-test-utils/protractor';
 import buttonDriverFactory from './RadioButton/RadioButton.protractor.driver';
-import { dataHooks as RadioButtonDataHooks } from './RadioButton/constants';
+import { dataHooks } from '../Radio/constants';
 
 const radioGroupDriverFactory = component => {
   const getRadioButtonLabel = index =>
-    component
-      .$$(`[data-hook="${RadioButtonDataHooks.RadioButtonLabel}"]`)
-      .get(index);
+    component.$$(`[data-hook="${dataHooks.label}"]`).get(index);
 
   const getRadioButtonRoot = index =>
-    component
-      .$$(`[data-hook="${RadioButtonDataHooks.RadioButtonWrapper}"]`)
-      .get(index);
+    component.$$(`[data-hook="${dataHooks.icon}"]`).get(index);
 
   return {
     getButtonDriver: index => buttonDriverFactory(getRadioButtonRoot(index)),
     getRadioAtIndex: index => getRadioButtonLabel(index),
     selectByIndex: index => getRadioButtonLabel(index).click(),
     isRadioChecked: index =>
-      component
-        .$$(`[data-hook="${RadioButtonDataHooks.RadioButtonInput}"]`)
-        .get(index)
-        .isSelected(),
+      component.$$(`[data-hook="${dataHooks.input}"]`).get(index).isSelected(),
     isRadioDisabled: index =>
       !!component
-        .$$(`[data-hook="${RadioButtonDataHooks.RadioButtonInput}"]`)
+        .$$(`[data-hook="${dataHooks.input}"]`)
         .get(index)
         .getAttribute('disabled'),
     /**
@@ -34,7 +27,7 @@ const radioGroupDriverFactory = component => {
     isRadioFocused: index =>
       isFocused(
         component
-          .$$(`[data-hook="${RadioButtonDataHooks.RadioButtonLabel}"]`)
+          .$$(`[data-hook="${dataHooks.label}"]`)
           .get(index)
           .$(`[tabindex="0"]`),
       ),

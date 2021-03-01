@@ -94,8 +94,34 @@ const DatePickerHead = ({
     );
   };
 
+  const KEYS = {
+    arrowUp: 'ArrowUp',
+    arrowDown: 'ArrowDown',
+    arrowLeft: 'ArrowLeft',
+    arrowRight: 'ArrowRight',
+  };
+
+  /* prevent the handleKeyDown method of the ReactDayPicker component to be executed when the focus is on one of the header elements */
+  const _handleKeyDown = event => {
+    // stop arrow up, arrow down, arrow left and arrow right ReactDayPicker handlers from changing the year and month
+    if (
+      event &&
+      event.key &&
+      (event.key === KEYS.arrowUp ||
+        event.key === KEYS.arrowDown ||
+        event.key === KEYS.arrowLeft ||
+        event.key === KEYS.arrowRight)
+    ) {
+      event.stopPropagation();
+    }
+  };
+
   return (
-    <div data-hook="datepicker-head" className={st(classes.root, className)}>
+    <div
+      data-hook="datepicker-head"
+      className={st(classes.root, className)}
+      onKeyDown={_handleKeyDown}
+    >
       <IconButton
         className={classes.arrowLeft}
         dataHook="datepicker-left-arrow"

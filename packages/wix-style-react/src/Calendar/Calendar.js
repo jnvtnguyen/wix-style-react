@@ -223,7 +223,7 @@ export default class Calendar extends React.PureComponent {
 
   _preventActionEventDefault = (event = null) => {
     // We should not prevent "TAB"/"ESC" key
-    if (event && (!event.keyCode || !this.keyHandlers[event.keyCode])) {
+    if (event && (!event.key || !this.keyHandlers[event.key])) {
       event.preventDefault();
     }
   };
@@ -372,17 +372,17 @@ export default class Calendar extends React.PureComponent {
   };
 
   _handleKeyDown = event => {
-    const keyHandler = this.keyHandlers[event.keyCode];
+    const keyHandler = this.keyHandlers[event.key];
 
     keyHandler && keyHandler(event);
   };
 
   keyHandlers = {
     // escape
-    27: this.props.onClose,
+    Escape: this.props.onClose,
 
     // tab
-    9: this.props.onClose,
+    Tab: this.props.onClose,
   };
 
   _focusSelectedDay = () => {
@@ -521,6 +521,18 @@ Calendar.propTypes = {
       'th',
       'cs',
       'uk',
+      'ar',
+      'bg',
+      'el',
+      'fi',
+      'he',
+      'hi',
+      'hu',
+      'id',
+      'ms',
+      'ro',
+      'lt',
+      'vi',
     ]),
     PropTypes.shape({
       code: PropTypes.string,

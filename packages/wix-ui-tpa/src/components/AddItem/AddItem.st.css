@@ -81,6 +81,12 @@
     background-color: value(CurrentBackgroundColor);
 }
 
+.wsrAddItemRoot:size(small),
+.wsrAddItemRoot:size(medium),
+.wsrAddItemRoot:size(large) {
+  padding: 12px 30px;
+}
+
 .wsrAddItemRoot:hasError {
     background-color: #FFFFFF;
     border-color: value(errorColor);
@@ -122,6 +128,15 @@
 
 .wsrAddItemRoot:direction(horizontal)::content .icon {
     flex-shrink: 0;
+}
+
+.wsrAddItemRoot:size(tiny)::icon {
+    margin: 0;
+}
+
+.wsrAddItemRoot:size(tiny):alignItems(left)::icon,
+.wsrAddItemRoot:size(tiny):alignItems(right)::icon {
+    margin: 0;
 }
 
 .wsrAddItemRoot:direction(vertical)::textWrapper {

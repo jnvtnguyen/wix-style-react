@@ -15,10 +15,20 @@ Types of changes:
 1. **Lab** components and features that are still in a work in progress
 
 ## Next
+### Added
+- `<Calendar/>` - add the missing locales [#6824](https://github.com/wix/wix-style-react/pull/6824)
+- `<AddItem />` - added `icon` prop for illustrations [#6786](https://github.com/wix/wix-style-react/pull/6786)
+
+### Changed
+- `<RadioGroup/>` - refactor to use Radio component [#6767](https://github.com/wix/wix-style-react/pull/6767)
+
 ### Fixed
 - `<Badge/>`-  fix font color when it is wider then max width [#6809](https://github.com/wix/wix-style-react/pull/6809)
 - `<Badge/>`-  fix icon to correct size [#6823](https://github.com/wix/wix-style-react/pull/6823)
 - `<Modal/>` - fix closing nested modals [#6839](https://github.com/wix/wix-style-react/pull/6839)
+- `<Calendar />` - fix behavior when focusing on header and pressing arrows [##6846](https://github.com/wix/wix-style-react/pull/6846)
+- `<RadioGroup/>` - fix puppeteer testkit - check not working [#6767](https://github.com/wix/wix-style-react/pull/6767)
+- `<RadioGroup/>` - custom children are not stretched to full width [#6767](https://github.com/wix/wix-style-react/pull/6767)
 
 ## 9.85.0 - 2021-02-23
 ### Added

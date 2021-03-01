@@ -2,31 +2,15 @@ import * as React from 'react';
 import { TPAComponentProps } from '../../types';
 
 import { Locale as DateFnsLocale } from 'date-fns';
-import WSRCalendar from 'wix-style-react/dist/src/Calendar';
+import WSRCalendar, {
+  LanguageType as WSRLanguageType,
+} from 'wix-style-react/dist/src/Calendar';
 
 import { st, classes } from './DatePicker.st.css';
 import { DATA_HOOKS } from './constants';
 import { TPAComponentsConsumer } from '../TPAComponentsConfig';
 
-export type LanguageType =
-  | 'en'
-  | 'es'
-  | 'pt'
-  | 'fr'
-  | 'de'
-  | 'pl'
-  | 'it'
-  | 'ru'
-  | 'ja'
-  | 'ko'
-  | 'tr'
-  | 'sv'
-  | 'no'
-  | 'nl'
-  | 'da'
-  | 'zh'
-  | 'th'
-  | 'cs';
+export type LanguageType = WSRLanguageType;
 export type Locale = LanguageType | DateFnsLocale;
 export type FirstDayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
