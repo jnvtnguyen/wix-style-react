@@ -6,9 +6,7 @@
   const [container, setContainer] = React.useState(null);
 
   const fetchMoreData = () =>
-    Promise.resolve(
-      StorybookUtils.fetch('/api/table', { load: data.length + 5 }),
-    )
+    Promise.resolve(fetch('/api/table', { load: data.length + 5 }))
       .then(data => {
         setData(data);
       })

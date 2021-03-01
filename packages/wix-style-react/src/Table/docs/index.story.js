@@ -15,6 +15,7 @@ import {
 import { Table } from '..';
 import { storySettings } from './storySettings';
 import allComponents from '../../../stories/utils/allComponents';
+import { createFetchEndpoint } from '../../../stories/utils/createFetchEndpoint';
 import compoundReadmeApi from './COMPOUND_README.API.md';
 import contextReadmeApi from './CONTEXT_README.API.md';
 import testkitReadme from './README.TESTKIT.md';
@@ -39,7 +40,15 @@ import TableStickyScrollExampleRaw from '!raw-loader!./examples/TableStickyScrol
 
 const code = config =>
   baseCode({
-    components: allComponents,
+    components: {
+      ...allComponents,
+      fetch: createFetchEndpoint('/api/table', data, [
+        { firstName: 'Meghan', lastName: 'Bishop' },
+        { firstName: 'Sara', lastName: 'Porter' },
+        { firstName: 'Deborah', lastName: 'Rhodes' },
+        { firstName: 'Walter', lastName: 'Jenning' },
+      ]),
+    },
     ...config,
   });
 
