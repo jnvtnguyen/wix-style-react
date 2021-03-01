@@ -9,7 +9,8 @@ export interface TableActionCellUniDriver extends BaseUniDriver {
   >;
   clickPrimaryActionButton: () => Promise<void>;
   getIsPrimaryActionButtonDisabled: () => Promise<boolean>;
-  primaryActionButtonAffixIconExists: () => Promise<boolean>;
+  primaryActionButtonPrefixIconExists: () => Promise<boolean>;
+  primaryActionButtonPrefixIconExists: () => Promise<boolean>;
   getVisibleActionsCount: () => Promise<number>;
   getHiddenActionsCount: () => Promise<number>;
   getVisibleActionTooltipDriver: (
