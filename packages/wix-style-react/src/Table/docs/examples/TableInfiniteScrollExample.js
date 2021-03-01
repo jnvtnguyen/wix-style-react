@@ -9,13 +9,13 @@
     { firstName: 'Walter', lastName: 'Jenning' },
   ]);
   const [container, setContainer] = React.useState(null);
-  let loaded = 2;
+  let loaded = React.useRef(2);
 
   const fetchMoreData = () => {
     setTimeout(() => {
-      loaded++;
+      loaded.current++;
 
-      Promise.resolve(StorybookUtils.fetch('/api/table', { load: loaded }))
+      Promise.resolve(StorybookUtils.fetch('/api/table', { load: loaded.current }))
         .then(data => {
           setData(data);
         })
@@ -25,6 +25,7 @@
 
   React.useEffect(() => {
     setContainer(containerRef);
+    fetchMoreData();
   }, []);
 
   const columns = [
