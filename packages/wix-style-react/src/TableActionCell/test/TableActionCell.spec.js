@@ -281,7 +281,7 @@ describe('Table Action Cell', () => {
         <TableActionCell {...primaryActionProps(() => {})} />,
       );
 
-      expect(await driver.getIsPrimaryActionButtonAffixIconExists()).toBe(false);
+      expect(await driver.primaryActionButtonAffixIconExists()).toBe(false);
     });
 
     it('should add prefix icon to primary action', async () => {
@@ -289,7 +289,7 @@ describe('Table Action Cell', () => {
         <TableActionCell {...primaryActionProps(() => {}, { prefixIcon: <Edit /> })} />,
       );
 
-      expect(await driver.getIsPrimaryActionButtonAffixIconExists()).toBe(true);
+      expect(await driver.primaryActionButtonAffixIconExists()).toBe(true);
     });
 
     it('should add suffix icon to primary action', async () => {
@@ -297,7 +297,7 @@ describe('Table Action Cell', () => {
         <TableActionCell {...primaryActionProps(() => {}, { suffixIcon: <Edit /> })} />,
       );
 
-      expect(await driver.getIsPrimaryActionButtonAffixIconExists()).toBe(true);
+      expect(await driver.primaryActionButtonAffixIconExists()).toBe(true);
     });
 
     describe('when a secondary action is disabled', () => {

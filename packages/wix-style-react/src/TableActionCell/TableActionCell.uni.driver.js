@@ -33,7 +33,7 @@ export const tableActionCellUniDriverFactory = (base, body) => {
   const getHiddenActionsPopoverMenuDriver = () =>
     PopoverMenuDriver(findByHook(base, dataHooks.popoverMenu), body);
 
-  const getIsPrimaryActionButtonAffixIconExists = () => Boolean(base.$('button > svg').exists());
+  const primaryActionButtonAffixIconExists = () => Boolean(base.$('button > svg').exists());
 
   return {
     ...baseUniDriverFactory(base, body),
@@ -62,7 +62,7 @@ export const tableActionCellUniDriverFactory = (base, body) => {
      * Checks whether the primary action button has an affix icon
      * @returns {Promise<boolean>}
      */
-    getIsPrimaryActionButtonAffixIconExists,
+    primaryActionButtonAffixIconExists,
 
     /**
      * Get the number of the visible secondary actions
