@@ -7,27 +7,36 @@ import * as floatingPanels from '../../src/Themes/floatingPanels';
 import AtlasAddressInput from '../../src/AtlasAddressInput';
 
 const Endpoints = {
-  '/api/table': [
-    { firstName: 'Meghana', lastName: 'Bishop' },
-    { firstName: 'Sara', lastName: 'Porter' },
-    { firstName: 'Deborah', lastName: 'Rhodes' },
-    { firstName: 'Walter', lastName: 'Jenning' },
-  ],
+  '/api/table': options => {
+    const initialData = [
+      { firstName: 'Meghana', lastName: 'Bishop' },
+      { firstName: 'Sara', lastName: 'Porter' },
+      { firstName: 'Deborah', lastName: 'Rhodes' },
+      { firstName: 'Walter', lastName: 'Jenning' },
+    ];
+
+    let results = initialData;
+
+    if (options.load) {
+      results = [];
+      for (let i = 0; i < options.load; i++) {
+        results.push(
+          initialData[
+            Math.floor(Math.random() * Math.floor(initialData.length))
+          ],
+        );
+      }
+    }
+
+    return results;
+  },
 };
 
 const StorybookUtils = {
   fetch: (api, options) => {
-    let EndpointsArray = Endpoints[api];
-
-    if (options) {
-      for (let i = 1; i <= options.load; i++) {
-        EndpointsArray = EndpointsArray.concat(Endpoints[api]);
-      }
-    }
-
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       if (Endpoints[api]) {
-        return resolve(EndpointsArray);
+        return setTimeout(() => resolve(Endpoints[api](options)), 1000);
       }
       return resolve(null);
     });
