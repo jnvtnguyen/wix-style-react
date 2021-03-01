@@ -33,7 +33,7 @@ export const tableActionCellUniDriverFactory = (base, body) => {
   const getHiddenActionsPopoverMenuDriver = () =>
     PopoverMenuDriver(findByHook(base, dataHooks.popoverMenu), body);
 
-  const getIsPrimaryActionButtonAffixIconExists = () => Boolean(base.$('button > svg').exists()),
+  const getIsPrimaryActionButtonAffixIconExists = () => Boolean(base.$('button > svg').exists());
 
   return {
     ...baseUniDriverFactory(base, body),
