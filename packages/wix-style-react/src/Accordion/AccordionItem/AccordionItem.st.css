@@ -88,6 +88,10 @@
   padding-top: 0;
 }
 
+.root:open:skin(light):hideShadow .header:hover {
+  background-color: value(D80);
+}
+
 .toggleButton {
   flex: 0 0 auto;
   margin-left: auto;
