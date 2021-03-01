@@ -276,7 +276,7 @@ describe('Table Action Cell', () => {
       expect(await driver.getIsPrimaryActionButtonDisabled()).toBe(true);
     });
 
-    it('should add prefix icon to primary action', async () => {
+    it('should not add prefix icon to primary action', async () => {
       const { driver } = render(
         <TableActionCell {...primaryActionProps(() => {})} />,
       );
@@ -292,7 +292,7 @@ describe('Table Action Cell', () => {
       expect(await driver.getIsPrimaryActionButtonPrefixIconExists()).toBe(true);
     });
 
-    it('should add suffix icon to primary action', async () => {
+    it('should not add suffix icon to primary action', async () => {
       const { driver } = render(
         <TableActionCell {...primaryActionProps(() => {})} />,
       );
