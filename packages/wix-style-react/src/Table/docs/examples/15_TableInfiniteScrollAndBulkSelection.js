@@ -50,7 +50,7 @@
 
   return (
     <div
-      ref={ref => (containerRef = ref)}
+      ref={containerRef}
       style={{ maxHeight: '258px', overflow: 'auto' }}
     >
       <Card>
@@ -59,7 +59,7 @@
           loadMore={simulateFetchFromServer}
           itemsPerPage={20}
           hasMore={true}
-          scrollElement={container}
+          scrollElement={container && container.current}
           totalSelectableCount={180}
           showSelection
           data={data}
