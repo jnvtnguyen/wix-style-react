@@ -1,7 +1,11 @@
 /* eslint-disable */
 
 () => {
-  const [activeFilters, setActiveFilter] = React.useState(filterOptions);
+  const filterOptions = [
+    { id: 'In Stock', children: 'In Stock' },
+    { id: 'Out Of Stock', children: 'Out Of Stock' },
+  ];
+
   const [records, setRecords] = React.useState([
     {
       name: `Red Slippers`,
@@ -35,6 +39,8 @@
     },
   ]);
 
+  const [activeFilters, setActiveFilter] = React.useState(filterOptions);
+
   const columns = [
     {
       title: 'Name',
@@ -56,11 +62,6 @@
       render: row => row.inventory,
       width: '20%',
     },
-  ];
-
-  const filterOptions = [
-    { id: 'In Stock', children: 'In Stock' },
-    { id: 'Out Of Stock', children: 'Out Of Stock' },
   ];
 
   const _getFilteredData = () => {
@@ -172,4 +173,4 @@
       </Page.Content>
     </Page>
   );
-};
+}; 
