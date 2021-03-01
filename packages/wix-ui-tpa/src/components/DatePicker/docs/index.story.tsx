@@ -28,7 +28,7 @@ const code = (config) =>
   baseCode({ components: allComponents, compact: true, ...config });
 
 export default {
-  category: StoryCategory.WIP,
+  category: StoryCategory.COMPONENTS,
   storyName: 'DatePicker',
   component: storyComponent(DatePicker),
   componentPath: '../DatePicker.tsx',

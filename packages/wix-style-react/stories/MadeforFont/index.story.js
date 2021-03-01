@@ -91,7 +91,7 @@ export default {
                     Include the Madefor font family css to your project's html
                     from the{' '}
                     <a
-                      href="https://wix-fonts.now.sh/?path=/story/fonts--madefor"
+                      href="https://bo.wix.com/pages/wix-fonts/?path=/story/fonts--madefor"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

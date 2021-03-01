@@ -30,6 +30,7 @@ export const ColorPickerPerf = () => {
           value={color.value}
           checked={index === 0}
           tooltip={color.tooltip}
+          withFocusRing
         />
       ))}
     </ColorPicker>

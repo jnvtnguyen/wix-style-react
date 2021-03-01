@@ -30,6 +30,7 @@ class ColorPickerStateful extends React.Component<Props, State> {
       {...this.props}
       className={classNames(classes.colorPicker, this.props.className)}
       onChange={this.handleSelection}
+      withFocusRing
     >
       {COLORS.map((color, index) => (
         <ColorPicker.Item

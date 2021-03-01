@@ -4,6 +4,11 @@
 }
 
 :import {
+    -st-from: "../../../common/palette.st.css";
+    -st-named: focusRing;
+}
+
+:import {
     -st-from: "wix-ui-core/index.st.css";
     -st-named: RadioButton;
 }
@@ -54,6 +59,10 @@
     border-radius: value(colorPickerBorderRadius);
     transition: box-shadow 0.1s linear;
     box-shadow: 0px 0px 0px 0px color(value(focusColor));
+}
+
+.focused {
+    -st-mixin: focusRing();
 }
 
 .root:checked .radioOuter, .root:focused .radioOuter {

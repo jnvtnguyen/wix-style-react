@@ -51,6 +51,7 @@ import * as React from "react";
                 <ColorPicker
                   aria-label="Color Picker"
                   onChange={({ value }) => setState({ selectedColorName: value })}
+                  withFocusRing
                 >
                   <ColorPicker.Item
                     key={1}

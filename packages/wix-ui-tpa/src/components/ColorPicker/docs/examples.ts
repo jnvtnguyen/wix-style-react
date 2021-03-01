@@ -22,6 +22,7 @@ export const basicExample = `
             <ColorPicker
               aria-label="Color Picker"
               onChange={this._onChange}
+              withFocusRing
             >
               <ColorPicker.Item
                 key={1}
@@ -53,7 +54,7 @@ export const basicExample = `
 }`;
 
 export const crossedOutExample = `
-    <ColorPicker onChange={({value}) => console.log(value)}>
+    <ColorPicker onChange={({value}) => console.log(value)} withFocusRing >
       <ColorPicker.Item aria-label="first color" value="red" isCrossedOut />
       <ColorPicker.Item aria-label="second color" value="green" />
       <ColorPicker.Item aria-label="third color" value="yellow" isCrossedOut />

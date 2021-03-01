@@ -53,7 +53,7 @@ For typescript users version `^3.9.7` is required.
 #### How to load wix-style-react compatible fonts:
 
 Load Wix fonts from CDN:<br/>
-- For Madefor font please visit [wix-fonts](https://wix-fonts.now.sh/).
+- For Madefor font please visit [wix-fonts](https://bo.wix.com/pages/wix-fonts/?path=/story/fonts--madefor).
 - For Helvetica Neue:
   ```html
   <link

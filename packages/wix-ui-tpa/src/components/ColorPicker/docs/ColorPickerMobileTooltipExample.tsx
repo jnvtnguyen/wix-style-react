@@ -65,6 +65,7 @@ export class ColorPickerMobileTooltipExample extends React.Component<
             isCrossedOut={itemProps.isCrossedOut}
             tooltip={itemProps.tooltip}
             checked={this.state.selectedColor === itemProps.value}
+            withFocusRing
           />
         ))}
       </ColorPicker>

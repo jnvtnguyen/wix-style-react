@@ -17,12 +17,20 @@ interface ColorPickerProps extends TPAComponentProps {
   'aria-labelledby'?: string;
   /** The group name for all color options */
   name?: string;
+  withFocusRing?: boolean;
+}
+
+interface ColorPickerDefaultProps {
+  withFocusRing: boolean;
 }
 
 /** ColorPicker */
 export class ColorPicker extends React.Component<ColorPickerProps> {
   private readonly _groupName: string;
   static displayName = colorPickerDataHook;
+  static defaultProps: ColorPickerDefaultProps = {
+    withFocusRing: false,
+  };
 
   constructor(props) {
     super(props);
@@ -33,7 +41,7 @@ export class ColorPicker extends React.Component<ColorPickerProps> {
   static Item = (props: ColorPickerItemProps) => <ColorPickerItem {...props} />;
 
   render() {
-    const { onChange, children, className, name } = this.props;
+    const { onChange, children, className, name, withFocusRing } = this.props;
 
     return (
       <fieldset
@@ -54,6 +62,7 @@ export class ColorPicker extends React.Component<ColorPickerProps> {
                 key: index,
                 className: classes.item,
                 name: name || this.props['aria-label'] || this._groupName,
+                withFocusRing,
               });
             },
           )}

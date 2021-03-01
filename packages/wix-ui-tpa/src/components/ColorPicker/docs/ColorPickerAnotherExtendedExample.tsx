@@ -28,6 +28,7 @@ export class ColorPickerAnotherExtendedExample extends React.Component<
       {...this.props}
       className={classes.root}
       onChange={this.handleSelection}
+      withFocusRing
     >
       {COLORS.map((color, index) => (
         <ColorPicker.Item
