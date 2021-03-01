@@ -136,7 +136,6 @@ class Checkbox extends React.PureComponent {
               <Text
                 size={size}
                 onClick={e => e.stopPropagation()}
-                skin={disabled ? 'disabled' : 'standard'}
                 weight="thin"
                 dataHook={dataHooks.children}
                 className={classes.children}
