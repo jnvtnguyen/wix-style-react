@@ -34,7 +34,7 @@ export const tableActionCellUniDriverFactory = (base, body) => {
     PopoverMenuDriver(findByHook(base, dataHooks.popoverMenu), body);
 
   const isAffixIconExists = async () =>
-    base.$('button > svg').exists(),
+    Boolean(base.$('button > svg').exists()),
 
   return {
     ...baseUniDriverFactory(base, body),
