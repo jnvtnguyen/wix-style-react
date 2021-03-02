@@ -28,7 +28,7 @@ describe('Stepper', () => {
         .mockImplementation(jest.fn());
     });
 
-    afterEach(() => {
+    afterAll(() => {
       consoleErrorSpy.mockRestore();
       PropTypes.resetWarningCache();
     });
