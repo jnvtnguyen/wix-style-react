@@ -2,8 +2,8 @@
 
 () => {
   const [searchTerm, setSearchTerm] = React.useState('');
-  const [right, setRight] = React.useState(0);
-  const [display, setDisplay] = React.useState('block');
+  const [right, setRight] = React.useState(-440);
+  const [display, setDisplay] = React.useState('none');
   const [records, setRecords] = React.useState([
     {
       name: `Adidas Sleek Shoes`,
@@ -300,26 +300,42 @@
               <SidePanel.Header title="Filters" />
               <Accordion
                 items={[
-                  {
-                    title: 'Payment Status',
-                  },
-                  {
-                    title: 'Date',
-                  },
-                  {
-                    title: 'Products',
-                  },
-                  {
-                    title: 'Sales Channels',
-                  },
-                  {
-                    title: 'Archive Status',
-                  },
+                  accordionItemBuilder({
+                    title: 'Inventory',
+                    children: (
+                      <RadioGroup value={1}>
+                        <RadioGroup.Radio value={1}>In stock</RadioGroup.Radio>
+                        <RadioGroup.Radio value={2}>
+                          Out of stock
+                        </RadioGroup.Radio>
+                      </RadioGroup>
+                    ),
+                  }),
+                  accordionItemBuilder({
+                    title: 'Type',
+                    children: (
+                      <RadioGroup value={1}>
+                        <RadioGroup.Radio value={1}>All</RadioGroup.Radio>
+                        <RadioGroup.Radio value={2}>Physical</RadioGroup.Radio>
+                        <RadioGroup.Radio value={2}>Digital</RadioGroup.Radio>
+                      </RadioGroup>
+                    ),
+                  }),
+                  accordionItemBuilder({
+                    title: 'Visibility',
+                    children: (
+                      <RadioGroup value={1}>
+                        <RadioGroup.Radio value={1}>All</RadioGroup.Radio>
+                        <RadioGroup.Radio value={2}>Shown</RadioGroup.Radio>
+                        <RadioGroup.Radio value={2}>Hiden</RadioGroup.Radio>
+                      </RadioGroup>
+                    ),
+                  }),
                 ]}
               />
               <SidePanel.Footer>
-                <Layout rowHeight="30px">
-                  <Cell span={5}>
+                <Layout rowHeight="30px" gap="12px">
+                  <Cell span={4}>
                     <Text size="small">No filters applied</Text>
                   </Cell>
                   <Cell span={1}>
