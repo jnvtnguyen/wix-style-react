@@ -158,6 +158,14 @@
     border-radius: 0;
 }
 
+.calendar::header::arrowLeft {
+    margin-left: 5%;
+}
+
+.calendar::header::arrowRight {
+    margin-right: 5%;
+}
+
 .calendar::header::arrowLeft:skin(light), .calendar::header::arrowRight:skin(light) {
     color: value(CurrentNavigationArrowsColor);
     background: none;
