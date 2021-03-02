@@ -66,7 +66,7 @@
   ];
 
   const _getFilteredData = () => {
-    let filteredData = records;
+    let filteredData = records.concat(records);
     if (activeFilter !== 'In Stock, Out Of Stock') {
       filteredData = filteredData.filter(row => row.inventory === activeFilter);
     } 
