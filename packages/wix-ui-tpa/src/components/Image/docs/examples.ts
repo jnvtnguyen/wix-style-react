@@ -51,7 +51,7 @@ export const commonWiringNumberParams = [
 
 export const absoluteUrlExample = `
 <Image
-  src="https://m.media-amazon.com/images/M/MV5BZGMwOGIwZjUtOWQ1OS00YWRjLWJmZGMtN2Y1OWQ3ZDYwYTM3XkEyXkFqcGdeQXVyNzU1NzE3NTg@._V1_.jpg"
+  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Botticelli-primavera.jpg"
   width={480}
   height={360}
   alt="Garfield smiles and puts his hand over chest"
@@ -60,7 +60,7 @@ export const absoluteUrlExample = `
 
 export const relativeUriExample = `
 <Image
-  src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+  src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
   width={480}
   height={360}
   alt="Garfield smiles and puts his hand over chest"
@@ -70,14 +70,14 @@ export const relativeUriExample = `
 export const dimensionsExample = `
 <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={300}
     height={250}
     alt="Garfield smiles and puts his hand over chest"
   />
   <div style={{width: '300px', height: '250px'}}>
     <Image
-      src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+      src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
       alt="Garfield smiles and puts his hand over chest"
     />
   </div>
@@ -87,14 +87,14 @@ export const dimensionsExample = `
 export const resizingExample = `
 <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
   <Image
-    src="https://static.wixstatic.com/media/c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg/v1/fill/w_480,h_360,al_c,lg_1,q_80/c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.webp"
+    src="https://static.wixstatic.com/media/c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg/v1/fill/w_480,h_360,al_c,lg_1,q_80/c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.webp"
     width={300}
     height={250}
     alt="Garfield smiles and puts his hand over chest"
     resize="${ResizeOptions.contain}"
   />
   <Image
-    src="https://static.wixstatic.com/media/c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg/v1/fill/w_480,h_360,al_c,lg_1,q_80/c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.webp"
+    src="https://static.wixstatic.com/media/c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg/v1/fill/w_480,h_360,al_c,lg_1,q_80/c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.webp"
     width={300}
     height={250}
     alt="Garfield smiles and puts his hand over chest"
@@ -106,7 +106,7 @@ export const resizingExample = `
 export const aspectRatioExample = `
 <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={300}
     alt="Garfield smiles and puts his hand over chest"
     resize="${ResizeOptions.cover}"
@@ -116,7 +116,7 @@ export const aspectRatioExample = `
     )}"
   />
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={300}
     alt="Garfield smiles and puts his hand over chest"
     resize="${ResizeOptions.cover}"
@@ -126,7 +126,7 @@ export const aspectRatioExample = `
     )}"
   />
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={300}
     alt="Garfield smiles and puts his hand over chest"
     resize="${ResizeOptions.cover}"
@@ -138,7 +138,7 @@ export const aspectRatioExample = `
 export const focalPointExample = `
 <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={300}
     height={100}
     alt="Garfield smiles and puts his hand over chest"
@@ -149,7 +149,7 @@ export const focalPointExample = `
     )}"
   />
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={300}
     height={100}
     alt="Garfield smiles and puts his hand over chest"
@@ -157,7 +157,7 @@ export const focalPointExample = `
     focalPoint={{ x: 0, y: 20 }}
   />
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={50}
     height={200}
     alt="Garfield smiles and puts his hand over chest"
@@ -170,7 +170,7 @@ export const focalPointExample = `
 export const fluidExample = `
 <div style={{ height: '200px' }}>
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={600}
     alt="Garfield smiles and puts his hand over chest"
     resize="${ResizeOptions.cover}"
@@ -186,14 +186,14 @@ export const fluidExample = `
 export const hoverEffectsExample = `
 <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={480}
     height={360}
     alt="Garfield smiles and puts his hand over chest"
     hoverEffect="${HoverEffectOptions.zoom}"
   />
   <Image
-    src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+    src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
     width={480}
     height={360}
     alt="Garfield smiles and puts his hand over chest"
@@ -219,7 +219,7 @@ class MediaImageWithBlurryLoading extends React.Component {
       <>
         <Image
           key={renderer}
-          src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"
+          src="c5f754_a33ed456e7d44777a5c0701a0375c6fa~mv2.jpg"
           width={480}
           height={360}
           loadingBehavior="${LoadingBehaviorOptions.blur}"
