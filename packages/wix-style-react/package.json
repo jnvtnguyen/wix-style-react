@@ -71,7 +71,7 @@
     "test4:e2e": "YOSHI_PROTRACTOR_CONFIG=./protractor2.conf.js npm run test:e2e",
     "test5:types": "npm run test:types && npm run pr-storybook:publish",
     "test6:sanity": "npm run lint && npm run sanity",
-    "test7:performance": "npm run transpile && npm run bundles:generate && perfer --verbose",
+    "test7:performance": "npm run transpile && npm run bundles:generate && perfer --chunked --verbose --json",
     "test8:chromatic": "npm run test:swimm",
     "------performance analysis tools": "",
     "bundles:analyse": "npm run analyse --prefix .perfer"
