@@ -2,6 +2,11 @@
 
 lerna bootstrap --no-ci
 
+# symlink each package node_modules/.bin to root node_modules/.bin
+# this is needed to support CLI tools in each package,
+# without installing CLI tools separately, multiple times
+lerna exec "rm -r node_modules/.bin | true; ln -s \$LERNA_ROOT_PATH/node_modules/.bin node_modules/.bin"
+
 if ! is-ci; then
   echo "Welcome to the Unified Library!"
   echo ""
