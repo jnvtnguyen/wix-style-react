@@ -52,6 +52,7 @@ function datePickerWithAllProps() {
       yearDropdownAriaLabel="year label"
       yearDropdownAriaLabelledBy="year_labelledby"
       size="medium"
+      readOnly={true}
     />
   );
 }

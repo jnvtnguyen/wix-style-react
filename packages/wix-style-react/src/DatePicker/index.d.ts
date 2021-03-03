@@ -27,6 +27,7 @@ export interface DatePickerProps extends CalendarProps {
   popoverProps?: PopoverCommonProps;
   firstDayOfWeek?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
   size?: 'small' | 'medium' | 'large';
+  readOnly?: boolean;
 }
 
 export default class DatePicker extends React.PureComponent<DatePickerProps> {

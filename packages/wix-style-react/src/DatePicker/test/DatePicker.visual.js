@@ -82,6 +82,21 @@ const testGroups = [
           },
         ],
       },
+      {
+        describe: 'ReadOnly',
+        its: [
+          {
+            placeholderText: 'Select Date',
+            readOnly: false,
+            value: new Date(),
+          },
+          {
+            placeholderText: 'Select Date',
+            readOnly: true,
+            value: new Date(),
+          },
+        ],
+      },
     ],
   },
   {

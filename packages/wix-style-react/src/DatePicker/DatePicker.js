@@ -378,4 +378,7 @@ DatePicker.propTypes = {
 
   /** Specifies the size of the input */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
+
+  /** Sets the DatePicker input to readOnly */
+  readOnly: PropTypes.bool,
 };

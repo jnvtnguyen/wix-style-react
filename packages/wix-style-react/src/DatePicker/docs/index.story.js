@@ -146,6 +146,19 @@ export default {
             source: examples.sizes,
           }),
 
+          example({
+            title: 'Read only',
+            text: `set DatePicker's input to be readOnly`,
+            source: examples.readOnly,
+          }),
+
+          example({
+            title: 'Width',
+            text:
+              '`<DatePicker />` supports changing its width. default width is 150px',
+            source: examples.width,
+          }),
+
           // TODO - disabled until https://github.com/wix/wix-style-react/issues/4157 is fixed
           // example({
           //   title: 'Range Selection',

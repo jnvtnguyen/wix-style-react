@@ -113,3 +113,31 @@ export const sizes = `
   </Cell>
 </Layout>
 `;
+
+export const readOnly = `
+<DatePicker
+  value={new Date()}
+  placeholderText="Select Date Range"
+  onChange={event => console.log(event)}
+  readOnly
+/>
+`;
+
+export const width = `
+<Layout cols={1}>
+  <Cell>
+    <DatePicker
+      value={new Date()}
+      placeholderText="Select Date"
+      width="150px"
+    />
+  </Cell>
+  <Cell>
+    <DatePicker
+      value={new Date()}
+      placeholderText="Select Date"
+      width="100%"
+    />
+  </Cell>
+</Layout>
+`;
