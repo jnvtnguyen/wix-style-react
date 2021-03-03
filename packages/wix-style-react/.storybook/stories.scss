@@ -1,3 +1,22 @@
+:root {
+  /* Recommended font stack */
+  --wix-font-stack: Madefor, 'Helvetica Neue', Helvetica, Arial, 'ãƒ¡ã‚¤ãƒªã‚ª', 'meiryo', 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ pro w3', 'hiragino kaku gothic pro', sans-serif;
+  --wix-font-weight-regular: 400;
+  --wix-font-weight-medium: 530;
+  --wix-font-weight-bold: 700;
+  --wix-font-weight-xbold: 800;
+}
+
+/* Madefor */
+@font-face {
+  font-family: Madefor;
+  font-display: swap;
+  font-weight: 400 800;
+  font-style: normal;
+  src: url(./WixMadeforTextVF_W_Wght.woff2)
+  format("woff2-variations");
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
