@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-lerna bootstrap --no-ci --hoist
+lerna bootstrap \
+  --no-ci \
+  --hoist \
+  --nohoist slick-carousel \
+  --nohoist @wix/wix-base-ui \
+  --nohoist bootstrap-sass
 
 # symlink each package node_modules/.bin to root node_modules/.bin
 # this is needed to support CLI tools in each package,
