@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-lerna bootstrap --no-ci
+lerna bootstrap --no-ci --hoist
 
 # symlink each package node_modules/.bin to root node_modules/.bin
 # this is needed to support CLI tools in each package,
