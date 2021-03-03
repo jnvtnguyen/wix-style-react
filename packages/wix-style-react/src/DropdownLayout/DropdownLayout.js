@@ -820,7 +820,7 @@ DropdownLayout.propTypes = {
 DropdownLayout.defaultProps = {
   options: [],
   tabIndex: 0,
-  maxHeightPixels: 260,
+  maxHeightPixels: 240,
   closeOnSelect: true,
   itemHeight: 'small',
   selectedHighlight: true,
