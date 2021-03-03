@@ -35,8 +35,10 @@ class RadioGroup extends React.PureComponent {
       selectionAreaSkin,
       selectionAreaPadding,
     } = this.props;
+    const uniqueName = name || uniqueId('RadioGroup_');
     return (
       <div
+        role="radiogroup"
         data-hook={dataHook}
         className={st(
           classes.root,
@@ -50,7 +52,7 @@ class RadioGroup extends React.PureComponent {
       >
         {React.Children.map(this.props.children, (radio, index) => {
           const checked = radio.props.value === value;
-          const radioName = radio.props.name || name;
+          const radioName = radio.props.name || uniqueName;
           const disabled =
             this.props.disabled ||
             disabledRadios.indexOf(radio.props.value) !== -1;
@@ -159,7 +161,6 @@ RadioGroup.defaultProps = {
   lineHeight: '24px',
   selectionArea: 'none',
   selectionAreaSkin: 'filled',
-  name: uniqueId('RadioGroup_'),
 };
 
 RadioGroup.Radio = Radio;
