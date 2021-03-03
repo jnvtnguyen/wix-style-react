@@ -46,7 +46,7 @@ const code = config =>
   baseCode({
     components: {
       ...allComponents,
-      fetch: createFetchEndpoint('/api/table', data, [
+      fetch: createFetchEndpoint('/mockApi', data, [
         { firstName: 'Meghan', lastName: 'Bishop' },
         { firstName: 'Sara', lastName: 'Porter' },
         { firstName: 'Deborah', lastName: 'Rhodes' },
