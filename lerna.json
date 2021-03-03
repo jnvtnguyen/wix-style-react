@@ -2,5 +2,14 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "command": {
+    "bootstrap": {
+      "ignore": [
+        "slick-carousel",
+        "@wix/wix-base-ui",
+        "bootstrap-sass"
+      ]
+    }
+  }
 }
