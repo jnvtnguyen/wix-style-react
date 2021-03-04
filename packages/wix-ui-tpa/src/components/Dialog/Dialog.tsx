@@ -119,7 +119,7 @@ export class Dialog extends React.Component<DialogProps> {
                   </div>
                   <div
                     className={`${classes.dialogContent} ${
-                      dialogContentClassName || ''
+                      childrenWrapperClassName || ''
                     }`}
                   >
                     {children}
