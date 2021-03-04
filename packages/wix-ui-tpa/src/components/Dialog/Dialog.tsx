@@ -21,7 +21,7 @@ export interface DialogProps extends TPAComponentProps {
   /** A class name that will be added to the content wrapper */
   contentClassName?: string;
   /** A class name that will be added to the dialog content */
- childrenWrapperClassName?: string;
+  childrenWrapperClassName?: string;
   /** Defines a string value that labels the dialog element. Optional. */
   'aria-label'?: string;
   /** Identifies the element that labels the dialog element. Optional. */
