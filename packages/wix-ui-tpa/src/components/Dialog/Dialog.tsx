@@ -19,7 +19,7 @@ export interface DialogProps extends TPAComponentProps {
   /** Children to render inside dialog */
   children?: React.ReactNode;
   /** A class name that will be added to the content wrapper */
-  contentWrapperClassName?: string;
+  contentClassName?: string;
   /** A class name that will be added to the dialog content */
   dialogContentClassName?: string;
   /** Defines a string value that labels the dialog element. Optional. */
