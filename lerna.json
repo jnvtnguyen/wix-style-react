@@ -2,7 +2,7 @@
   "packages": [
     "packages/*"
   ],
-  "hoist": true,
+  "hoist": false,
   "nohoist": [
     "slick-carousel",
     "@wix/wix-base-ui",
