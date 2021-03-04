@@ -14,13 +14,14 @@
 }
 
 .root {
-    -st-states: fullscreen, stickyTitle, stickyFooter, noTitle, noFooter;
+    -st-states: fullscreen, stickyTitle, stickyFooter, noTitle, noFooter, closeBtn;
     height: 100%;
     width: 100%;
     padding: 30px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
+  outline: 1px solid black;
 }
 
 .root:fullscreen {
@@ -78,6 +79,10 @@
 
 .root:noFooter .content {
   padding-bottom: 24px;
+}
+
+.root:closeBtn .content {
+  padding-right: 48px;
 }
 
 .footer {

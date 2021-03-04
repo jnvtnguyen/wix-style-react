@@ -72,6 +72,7 @@ class ModalMobileLayout extends React.PureComponent {
             stickyFooter,
             noTitle: !title,
             noFooter: !footer,
+            closeBtn: !!onCloseButtonClick,
           },
           className,
         )}
