@@ -2,5 +2,11 @@
   "packages": [
     "packages/*"
   ],
+  "hoist": true,
+  "nohoist": [
+    "slick-carousel",
+    "@wix/wix-base-ui",
+    "bootstrap-sass"
+  ],
   "version": "0.0.0"
 }
