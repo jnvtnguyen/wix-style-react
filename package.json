@@ -101,7 +101,7 @@
     "jest": "^24.9.0",
     "jest-canvas-mock": "^2.3.1",
     "jest-yoshi-preset": "^4.87.0",
-    "lerna": "^3.22.1",
+    "lerna": "^4.0.0",
     "lint-staged": "^9.2.0",
     "mkdirp": "^0.5.5",
     "node-fetch": "^2.6.1",
