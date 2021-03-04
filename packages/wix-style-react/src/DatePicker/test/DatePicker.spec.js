@@ -743,16 +743,22 @@ describe('DatePicker', () => {
     describe('`readonly` prop', () => {
       it('should be false by default', async () => {
         const {
-          driver: { inputDriver },
+          driver: { inputDriver, driver, calendarDriver },
         } = render(<DatePicker onChange={noop} />);
         expect(await inputDriver.getReadOnly()).toBe(false);
+        expect(await calendarDriver.isVisible()).toBe(false);
+        await driver.open();
+        expect(await calendarDriver.isVisible()).toBe(true);
       });
 
       it('should be readonly when true', async () => {
         const {
-          driver: { inputDriver },
+          driver: { inputDriver, driver, calendarDriver },
         } = render(<DatePicker onChange={noop} readOnly />);
         expect(await inputDriver.getReadOnly()).toBe(true);
+        expect(await calendarDriver.isVisible()).toBe(false);
+        await driver.open();
+        expect(await calendarDriver.isVisible()).toBe(false);
       });
     });
 

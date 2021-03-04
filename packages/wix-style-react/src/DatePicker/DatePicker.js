@@ -63,7 +63,7 @@ export default class DatePicker extends React.PureComponent {
   }
 
   openCalendar = () => {
-    if (!this.state.isOpen) {
+    if (!this.state.isOpen && !this.props.readOnly) {
       this.setState({
         isOpen: true,
         isDateInputFocusable: false,
