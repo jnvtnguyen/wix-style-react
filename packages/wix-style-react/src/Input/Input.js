@@ -278,7 +278,6 @@ class Input extends Component {
     const onIconClicked = event => {
       if (!disabled) {
         this.input && this.input.focus();
-        this._isMounted && this._onFocus();
         this._onClick(event);
       }
     };
