@@ -60,19 +60,13 @@
 
 .close {
   position: absolute;
-  margin-top: -9px;
-  right: 16px;
+  top: 6px;
+  right: 6px;
 }
 
-.root:withTitle .close {
-  top: 10px;
-  right: 10px;
-  margin: 0;
-}
-
-:global([dir='rtl']) .root:withTitle .close {
-  right: initial;
-  left: 16px;
+:global([dir='rtl']) .close {
+  left: 6px;
+  right: unset;
 }
 
 .title {
