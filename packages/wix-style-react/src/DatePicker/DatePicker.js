@@ -36,7 +36,7 @@ export default class DatePicker extends React.PureComponent {
     locale: 'en',
     filterDate: () => true,
     rtl: false,
-    width: 150,
+    width: '100%',
     zIndex: 1,
     disabled: false,
     inputDataHook: dataHooks.datePickerInput,
@@ -379,6 +379,6 @@ DatePicker.propTypes = {
   /** Specifies the size of the input */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 
-  /** Sets the DatePicker input to readOnly */
+  /** Sets the DatePicker input to be readOnly */
   readOnly: PropTypes.bool,
 };

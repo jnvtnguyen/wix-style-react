@@ -148,14 +148,14 @@ export default {
 
           example({
             title: 'Read only',
-            text: `set DatePicker's input to be readOnly`,
+            text: 'Sets the DatePicker input to be readOnly',
             source: examples.readOnly,
           }),
 
           example({
             title: 'Width',
             text:
-              '`<DatePicker />` supports changing its width. default width is 150px',
+              '`<DatePicker />` supports changing its width. Default width is 100%',
             source: examples.width,
           }),
 

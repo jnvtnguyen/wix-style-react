@@ -103,7 +103,7 @@ const testGroups = [
     describe: 'width prop',
     tests: [
       {
-        describe: 'should be 150px by default',
+        describe: 'should be 100% by default',
         its: [
           {
             placeholderText: 'Select Date',

@@ -129,14 +129,14 @@ export const width = `
     <DatePicker
       value={new Date()}
       placeholderText="Select Date"
-      width="150px"
+      width="100%"
     />
   </Cell>
   <Cell>
     <DatePicker
       value={new Date()}
       placeholderText="Select Date"
-      width="100%"
+      width="150px"
     />
   </Cell>
 </Layout>
