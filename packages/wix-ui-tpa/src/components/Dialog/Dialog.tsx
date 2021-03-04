@@ -98,7 +98,7 @@ export class Dialog extends React.Component<DialogProps> {
               <div className={classes.outerContentWrapper}>
                 <div
                   className={`${classes.contentWrapper} ${
-                    contentWrapperClassName || ''
+                    contentClassName || ''
                   }`}
                   role="dialog"
                   aria-modal="true"
