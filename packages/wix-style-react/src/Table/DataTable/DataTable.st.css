@@ -5,7 +5,7 @@
 
 :import {
   -st-from: '../../Foundation/stylable/typography.st.css';
-  -st-named: text-small-thin , text-small-normal, text-medium-thin;
+  -st-named: text-small-thin , text-small-normal, text-small-bold, text-medium-thin;
 }
 
 :vars {
@@ -224,7 +224,7 @@
 }
 
 .highlight td {
-  -st-mixin: text-small-normal;
+  -st-mixin: text-small-bold;
   color: value(D10);
 }
 
