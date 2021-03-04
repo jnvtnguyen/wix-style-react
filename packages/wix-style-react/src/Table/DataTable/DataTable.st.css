@@ -5,7 +5,7 @@
 
 :import {
   -st-from: '../../Foundation/stylable/typography.st.css';
-  -st-named: text-small-thin , text-small-normal;
+  -st-named: text-small-thin , text-small-normal, text-medium-thin;
 }
 
 :vars {
@@ -208,6 +208,11 @@
   padding: 0;
   height: auto;
   box-shadow: inset 0 -1px 0 0 value(D70);
+}
+
+.table td.important {
+  -st-mixin: text-medium-thin;
+  color: value(D10);
 }
 
 .clickableDataRow {
