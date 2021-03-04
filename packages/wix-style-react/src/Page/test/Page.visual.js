@@ -11,6 +11,7 @@ import {
   EmptyStateExample,
 } from './examples/testExamples';
 import { BMPageContainer } from './examples/BMPageContainer';
+import { classes } from './examples/PageStory.st.css';
 
 const baseProps = {
   children: [renderHeader(), renderContent()],
@@ -33,7 +34,7 @@ const tests = [
         props: {
           ...baseProps,
           backgroundImageUrl: '',
-          gradientClassName: 'background-gradient',
+          gradientClassName: classes.backgroundGradient,
         },
       },
     ],

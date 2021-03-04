@@ -1,6 +1,6 @@
 
 :import {
-    -st-from: "../Foundation/stylable/colors.st.css";
+    -st-from: '../Foundation/stylable/colors.st.css';
     -st-named: D80, THEME-COLOR-30, THEME-COLOR-10, F00, THEME-COLOR-50, R10, D40, R30, D10-30, D60, D70
 }
 
@@ -10,7 +10,7 @@
 }
 
 :import {
-  -st-from: "../Foundation/stylable/default-scroll-bar.st.css";
+  -st-from: '../Foundation/stylable/default-scroll-bar.st.css';
   -st-named: defaultScrollBar;
 }
 .root {

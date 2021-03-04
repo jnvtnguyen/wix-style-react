@@ -1,5 +1,5 @@
 :import {
-  -st-from: "../Foundation/stylable/colors.st.css";
+  -st-from: '../Foundation/stylable/colors.st.css';
   -st-named:
     THEME-COLOR-10, THEME-COLOR-20, THEME-COLOR-30, THEME-COLOR-40, THEME-COLOR-50,
     D20, D60, D70, D80,
@@ -13,27 +13,27 @@
 }
 
 :import {
-  -st-from: "../Tooltip/Tooltip.st.css";
+  -st-from: '../Tooltip/Tooltip.st.css';
   -st-default: Tooltip;
 }
 
 :import {
-  -st-from: "../Foundation/stylable/opacity.st.css";
+  -st-from: '../Foundation/stylable/opacity.st.css';
   -st-named: opacity48;
 }
 
 :import {
-  -st-from: "../Foundation/stylable/border.st.css";
+  -st-from: '../Foundation/stylable/border.st.css';
   -st-named: radius08;
 }
 
 :import {
-  -st-from: "wix-ui-core/dist/src/hocs/Focusable/Focusable.st.css";
+  -st-from: 'wix-ui-core/dist/src/hocs/Focusable/Focusable.st.css';
   -st-default: Focusable;
 }
 
 :import {
-  -st-from: "../Text/Text.st.css";
+  -st-from: '../Text/Text.st.css';
   -st-default: Text;
 }
 

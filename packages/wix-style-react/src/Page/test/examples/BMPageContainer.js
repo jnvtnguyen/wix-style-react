@@ -1,20 +1,24 @@
 import React from 'react';
-import s from './BMPageContainer.scss';
+import { classes } from './BMPageContainer.st.css';
 
 /* This layout try to imitate the current BusinessManager's layout and styles. */
 
 export const BMPageContainer = ({ children }) => (
-  <div className={s.root}>
-    <div className={s.header} />
-    <div className={s.body}>
-      <div className={s.sideBar}>
-        <div className={s.sideBarContent}>SideBar Which is 220px wide</div>
+  <div className={classes.root}>
+    <div className={classes.header} />
+    <div className={classes.body}>
+      <div className={classes.sideBar}>
+        <div className={classes.sideBarContent}>
+          SideBar Which is 220px wide
+        </div>
       </div>
-      <div className={s.rightSide}>
-        <div className={s.mainContentContainer}>
-          <div className={s.mainContent}>
-            <div className={s.withLoadingIndicatorWrapper}>
-              <div className={s.withLoadingIndicatorContainer}>{children}</div>
+      <div className={classes.rightSide}>
+        <div className={classes.mainContentContainer}>
+          <div className={classes.mainContent}>
+            <div className={classes.withLoadingIndicatorWrapper}>
+              <div className={classes.withLoadingIndicatorContainer}>
+                {children}
+              </div>
             </div>
           </div>
         </div>

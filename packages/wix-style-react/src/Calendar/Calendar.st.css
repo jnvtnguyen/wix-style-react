@@ -1,7 +1,7 @@
 @st-global-custom-property --wsr-font-family;
 
 :import {
-  -st-from: "../Foundation/stylable/colors.st.css";
+  -st-from: '../Foundation/stylable/colors.st.css';
   -st-named: D80, D10, D70, D10, D55, F00,
   THEME-COLOR-10, THEME-COLOR-20, THEME-COLOR-50;
 }

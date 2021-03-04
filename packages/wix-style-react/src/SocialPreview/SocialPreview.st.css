@@ -4,7 +4,7 @@
 }
 
 :import {
-  -st-from: "../Foundation/stylable/colors.st.css";
+  -st-from: '../Foundation/stylable/colors.st.css';
   -st-named: D10, D20, D40, D60, D70, D80;
 }
 

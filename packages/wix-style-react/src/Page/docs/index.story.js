@@ -22,7 +22,7 @@ import {
   fixedContent as fixedContentExample,
   content as contentExample,
 } from '../test/examples/PageChildren';
-import '../test/examples/PageStory.scss';
+import { classes } from '../test/examples/PageStory.st.css';
 import ChildrenReadme from './Children.md';
 import * as examples from './examples';
 
@@ -47,7 +47,7 @@ export default {
 
   componentProps: {
     children: [headerExample(), tailExample, contentExample(false)],
-    gradientClassName: 'background-gradient',
+    gradientClassName: classes.backgroundGradient,
   },
 
   exampleProps: {

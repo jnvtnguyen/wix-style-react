@@ -12,8 +12,7 @@ import IconButton from '../../IconButton';
 import Card from '../../Card';
 import More from 'wix-ui-icons-common/More';
 
-import * as s from './examples/PageTestStories.scss';
-import './examples/PageStory.scss';
+import { classes } from './examples/testExamples.st.css';
 import classNames from 'classnames';
 import { header, tail, fixedContent, content } from './examples/PageChildren';
 import { storySettings } from '../docs/storySettings';
@@ -24,8 +23,8 @@ import PageFooter from '../../PageFooter';
 const PageContainer = props => {
   return (
     <div
-      className={classNames(s.pageContainer, {
-        [s.withFixedScrollBar]: props.withFixedScrollBar,
+      className={classNames(classes.pageContainer, {
+        [classes.withFixedScrollBar]: props.withFixedScrollBar,
       })}
       {...props}
     >
@@ -42,7 +41,7 @@ const kind = getTestStoryKind(storySettings);
 
 const defaultPageProps = {
   dataHook: storySettings.dataHook,
-  gradientClassName: 'background-gradient',
+  gradientClassName: classes.backgroundGradient,
   children: [header(), content()],
 };
 

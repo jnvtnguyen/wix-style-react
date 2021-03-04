@@ -1,5 +1,5 @@
 :import {
-  -st-from: "../Foundation/stylable/colors.st.css";
+  -st-from: '../Foundation/stylable/colors.st.css';
   -st-named: G30, R30, D80;
 }
 
@@ -9,7 +9,7 @@
 }
 
 :import {
-    -st-from: "../Foundation/stylable/default-scroll-bar.st.css";
+    -st-from: '../Foundation/stylable/default-scroll-bar.st.css';
     -st-named: defaultScrollBar;
 }
 

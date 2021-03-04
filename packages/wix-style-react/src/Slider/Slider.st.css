@@ -1,5 +1,5 @@
 :import {
-  -st-from: "../Foundation/stylable/colors.st.css";
+  -st-from: '../Foundation/stylable/colors.st.css';
   -st-named: D10-10, D10, D50, THEME-COLOR-10, THEME-COLOR-40 ;
 }
 

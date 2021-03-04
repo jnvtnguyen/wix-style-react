@@ -2,11 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import Add from 'wix-ui-icons-common/Add';
 import More from 'wix-ui-icons-common/More';
-
 import SomeContentComponent from './SomeContentComponent';
 import ImagePlaceholder from '../../../../stories/utils/ImagePlaceholder';
-
-import * as s from './testExamples.scss';
+import { classes } from './testExamples.st.css';
 
 import {
   Page,
@@ -51,8 +49,8 @@ const ActionsBar = () => {
 export const PageContainer = props => {
   return (
     <div
-      className={classNames(s.pageContainer, {
-        [s.withFixedScrollBar]: props.withFixedScrollBar,
+      className={classNames(classes.pageContainer, {
+        [classes.withFixedScrollBar]: props.withFixedScrollBar,
       })}
       {...props}
     >

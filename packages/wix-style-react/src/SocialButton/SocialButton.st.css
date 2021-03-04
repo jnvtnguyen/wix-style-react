@@ -4,12 +4,12 @@
 }
 
 :import {
-  -st-from: "../Foundation/stylable/colors.st.css";
+  -st-from: '../Foundation/stylable/colors.st.css';
   -st-named: D80, D80-70, D10-30, F00;
 }
 
 :import {
-  -st-from: "../Foundation/stylable/mixins/calc_rgba";
+  -st-from: '../Foundation/stylable/mixins/calc_rgba';
   -st-default: calc_rgba;
 }
 

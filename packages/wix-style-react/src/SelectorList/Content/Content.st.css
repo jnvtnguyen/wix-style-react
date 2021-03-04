@@ -1,5 +1,5 @@
 :import {
-  -st-from: "../../Foundation/stylable/default-scroll-bar.st.css";
+  -st-from: '../../Foundation/stylable/default-scroll-bar.st.css';
   -st-named: defaultScrollBar;
 }
 
