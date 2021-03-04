@@ -1,8 +1,7 @@
 export const createFetchEndpoint = (endpoint, initialData) => {
   return api => {
-    if (api === endpoint) {
-      const url = new URL(`https://random.com${api}`);
-      console.log(url, api);
+    const url = new URL(`https://www.random.com${api}`);
+    if (url.pathname === endpoint) {
       return new Promise(resolve => {
         let results = initialData;
         if (url.searchParams.get('items')) {
