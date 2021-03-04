@@ -14,11 +14,18 @@
 }
 
 .table {
-  -st-mixin: text-small-thin;
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
   background-color: white;
+}
+
+.table thead {
+  -st-mixin: text-small-normal;
+}
+
+.table tbody {
+  -st-mixin: text-small-thin;
 }
 
 .table.virtualized {
@@ -283,7 +290,7 @@
 }
 
 .scrollWrapper.leftShadowVisible:not(.withStickyColumns)::before, .scrollWrapper.leftShadowVisible .lastSticky::after {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  background-image: linear-gradient(to right, value(D10-10), transparent);
   left: 0;
   opacity: 1;
 }
@@ -294,7 +301,7 @@
 }
 
 .scrollWrapper.rightShadowVisible::after {
-  background-image: linear-gradient(to left, value(D10-10), rgba(0, 0, 0, 1));
+  background-image: linear-gradient(to left, value(D10-10), transparent);
   right: 0;
   opacity: 1;
 }
