@@ -9,7 +9,7 @@ import { VariableSizeList as List } from 'react-window';
 import { ScrollSyncPane } from 'react-scroll-sync';
 import { TooltipCommonProps } from '../../common/PropTypes/TooltipCommon';
 import { WixStyleReactContext } from '../../WixStyleReactProvider/context';
-import styles from './DataTable.scss';
+import { st, classes } from './DataTable.st.css';
 import InfiniteScroll from '../../utils/InfiniteScroll';
 import InfoIcon from '../../InfoIcon';
 
@@ -26,10 +26,10 @@ export const DataTableHeader = props => {
 
   const wrapWithHorizontalScroll = table => (
     <div
-      className={classNames(styles.scrollWrapper, {
-        [styles.leftShadowVisible]: !!leftShadowVisible,
-        [styles.rightShadowVisible]: !!rightShadowVisible,
-        [styles.withStickyColumns]: !!stickyColumns,
+      className={classNames(classes.scrollWrapper, {
+        [classes.leftShadowVisible]: !!leftShadowVisible,
+        [classes.rightShadowVisible]: !!rightShadowVisible,
+        [classes.withStickyColumns]: !!stickyColumns,
       })}
     >
       <ScrollSyncPane>{table}</ScrollSyncPane>
@@ -40,10 +40,10 @@ export const DataTableHeader = props => {
     <div
       data-hook={dataHook}
       className={classNames({
-        [styles.tableHeaderScrollContent]: horizontalScroll,
+        [classes.tableHeaderScrollContent]: horizontalScroll,
       })}
     >
-      <table style={{ width: props.width }} className={styles.table}>
+      <table style={{ width: props.width }} className={classes.table}>
         <TableHeader {...props} />
       </table>
     </div>
@@ -87,7 +87,7 @@ class DataTable extends React.Component {
   }
 
   get style() {
-    return styles;
+    return classes;
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -198,7 +198,7 @@ class DataTable extends React.Component {
         data-hook={dataHook}
         {...(horizontalScroll
           ? {
-              className: styles.tableBodyScrollContent,
+              className: classes.tableBodyScrollContent,
               ref: this.contentRef,
               onScroll: this._updateScrollShadows,
             }
@@ -306,6 +306,8 @@ class DataTable extends React.Component {
         style={style}
         key={key}
         {...optionalRowProps}
+        data-animated={!!rowDetails ? true : null}
+        data-clickable={onRowClick && !isRowDisabled(rowData) ? true : null}
       >
         {columns.map((column, colNum) =>
           this.renderCell(rowData, column, rowNum, colNum),
@@ -518,7 +520,7 @@ class TableHeader extends Component {
   };
 
   get style() {
-    return styles;
+    return classes;
   }
 
   renderSortingArrow = (sortDescending, colNum) => {

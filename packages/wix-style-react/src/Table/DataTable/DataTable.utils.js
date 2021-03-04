@@ -1,5 +1,5 @@
 import shallowEqual from 'shallowequal';
-import styles from './DataTable.scss';
+import { stVars } from './DataTable.st.css';
 
 export function virtualRowsAreEqual(prevProps, nextProps) {
   const {
@@ -27,8 +27,8 @@ export function virtualRowsAreEqual(prevProps, nextProps) {
   );
 }
 
-const CELL_PADDING = parseInt(styles.cellHorizontalPadding, 10);
-const CELL_EDGE_PADDING = parseInt(styles.cellHorizontalEdgePadding, 10);
+const CELL_PADDING = parseInt(stVars.cellHorizontalPadding, 10);
+const CELL_EDGE_PADDING = parseInt(stVars.cellHorizontalEdgePadding, 10);
 
 export const getStickyColumnStyle = (columns, column) => {
   let left = 0;

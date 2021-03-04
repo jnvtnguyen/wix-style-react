@@ -86,8 +86,10 @@ export const dataTableUniDriverFactory = base => {
       getCell(rowIndex, colIndex)._prop('style'),
     getCellWidth: (rowIndex, colIndex) =>
       getCell(rowIndex, colIndex)._prop('width'),
-    isRowClickable: index => getRows().get(index).hasClass('clickableDataRow'),
-    isRowAnimated: index => getRows().get(index).hasClass('animatedDataRow'),
+    isRowClickable: async index =>
+      !!(await getRows().get(index).attr('data-clickable')),
+    isRowAnimated: async index =>
+      !!(await getRows().get(index).attr('data-animated')),
     getTitles: () =>
       getHeader()
         .$$('th')

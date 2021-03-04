@@ -628,7 +628,7 @@ describe('Table', () => {
       );
 
       const classes = (await driver.getRowClasses(0)).sort();
-      expect(classes.includes('highlight')).toEqual(true);
+      expect(classes[0]).toContain('highlight');
     });
   }
 

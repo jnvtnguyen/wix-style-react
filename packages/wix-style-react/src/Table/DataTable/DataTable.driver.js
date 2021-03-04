@@ -65,10 +65,8 @@ const dataTableDriverFactory = ({ element }) => {
     getCell,
     getCellStyle: (rowIndex, colIndex) => getCell(rowIndex, colIndex).style,
     getCellWidth: (rowIndex, colIndex) => getCell(rowIndex, colIndex).width,
-    isRowClickable: index =>
-      getRows()[index].classList.contains('clickableDataRow'),
-    isRowAnimated: index =>
-      getRows()[index].classList.contains('animatedDataRow'),
+    isRowClickable: index => getRows()[index].hasAttribute('data-clickable'),
+    isRowAnimated: index => getRows()[index].hasAttribute('data-animated'),
     getTitles: () =>
       values(getHeader().querySelectorAll('th')).map(th => th.textContent),
     isDisplayingNothing: () => isDisplayingNothing,
