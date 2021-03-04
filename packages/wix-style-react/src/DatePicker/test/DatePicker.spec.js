@@ -366,7 +366,7 @@ describe('DatePicker', () => {
           } = render(<DatePicker onChange={noop} />);
           await inputDriver.click();
 
-          expect(await driver.getWidth()).toBe('150px');
+          expect(await driver.getWidth()).toBe('100%');
         });
 
         it('should allow to be changed to Input', async () => {
